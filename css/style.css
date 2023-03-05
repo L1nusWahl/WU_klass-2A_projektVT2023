@@ -8,12 +8,12 @@
 
 #grid_wrapper{
     display: grid;
-    height: 300vh;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 40px 850px 850px 100px ;
+    height: 400vh;
+    grid-template-columns: minmax(200px, 1fr) 200px;
+    grid-template-rows: 80px 80px 600px 850px 850px 200px ;
     grid-template-areas:
-    "he he"
-    "na na"
+    "he na"
+    "sh sh"
     "if if"
     "sp sp"
     "fo fo";
@@ -27,17 +27,17 @@ header{
 
 }
 
-nav{
-    display: flex;
-    grid-area: na;
-    background: rgb(148, 87, 87);
+#slideshow {
+    display: grid;
+    background: rgb(185, 127, 127);
+    grid-area: sh;
+
 }
 
 #information{
     display: flex;
     grid-area: if;
     background: rgb(185, 127, 127);
-
 }
 
 #sponsorer {
@@ -51,4 +51,110 @@ footer{
     display: flex;
     grid-area: fo;
     background: rgb(113, 74, 74);
+}
+
+nav {
+    display: flex;
+    height: 80px;
+    background-color: rgb(148, 87, 87);
+    grid-area: na;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+#burger div {
+    display: flex;
+    height: 5px;
+    width: 30px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+#nav-links {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 200px;
+    background-color: rgb(148, 87, 87);
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: -500px;
+    right: 0px;
+    transition: all 0.5s;
+    grid-area: nl ;
+}
+
+#nav-links li{
+    list-style: none;
+}
+#nav-links a{
+   text-decoration: none;
+   font-size: 1.25rem;
+   letter-spacing: 0.1875rem;
+   color: black;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: bold;
+}
+
+#burger {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.burger_toggle #burger_line_2 {
+    opacity: 0;
+}
+
+.burger_toggle #burger_line_1 {
+    transform: rotate(-45deg) translate(-8px, 6px);  
+}
+
+.burger_toggle #burger_line_3 {
+    transform: rotate(45deg) translate(-8px, -6px);
+}
+
+.nav_active {
+    transform: translateY(580px);
+}
+
+@media screen and (min-width: 800px) {
+    #burger {
+        display: none;
+    }
+
+    #grid_wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 80px 600px 850px 850px 200px ;
+        grid-template-areas:
+        "na na"
+        "he he"
+        "sh sh"
+        "if if"
+        "sp sp"
+        "fo fo";
+    }
+    
+
+    nav {
+        background: rgb(185, 127, 127);
+    }
+
+    #nav-links {
+        flex-direction: row;
+        height: 80px;
+        width: 100%;
+        background-color: rgb(185, 127, 127);
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    .nav_active {
+        transform: translateY(0px);
+    }
 }
