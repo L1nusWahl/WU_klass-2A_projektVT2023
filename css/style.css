@@ -1,0 +1,54 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    max-height: fit-content;
+   
+}
+
+#grid_wrapper{
+    display: grid;
+    height: 300vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 40px 850px 850px 100px ;
+    grid-template-areas:
+    "he he"
+    "na na"
+    "if if"
+    "sp sp"
+    "fo fo";
+}
+
+
+header{
+    display: flex;
+    grid-area: he;
+    background: rgb(148, 87, 87);
+
+}
+
+nav{
+    display: flex;
+    grid-area: na;
+    background: rgb(148, 87, 87);
+}
+
+#information{
+    display: flex;
+    grid-area: if;
+    background: rgb(185, 127, 127);
+
+}
+
+#sponsorer {
+    display: flex;
+    grid-area: sp;
+    background: rgb(185, 127, 127);
+
+}
+
+footer{
+    display: flex;
+    grid-area: fo;
+    background: rgb(113, 74, 74);
+}
