@@ -10,7 +10,7 @@
 #grid_wrapper{
     display: grid;
     height: 400vh;
-    grid-template-columns: minmax(200px, 1fr) 200px;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 80px 550px 850px 300px 500px 300px;
     grid-template-areas:
     "he he"
@@ -33,6 +33,7 @@ header{
     align-items: center;
     border-bottom: solid 2px rgb(0, 0, 0);
 }
+
 
 #background_img {
     width: 100%;
@@ -90,6 +91,11 @@ header{
     justify-content: space-between;
     background: whitesmoke;
 }
+
+.information_ruta:hover {
+    border: solid 1px black;
+    background: white;
+}
 .text_ruta {
     display: flex;
     height: 70px;
@@ -97,7 +103,7 @@ header{
     justify-content: center;
     border-bottom: solid 1px grey;
 }
-#information_text {
+.information_text {
     display: flex;
     padding: 5px;
     flex-direction: column;
@@ -116,34 +122,30 @@ h1 {
 }
 #links {
     display: flex;
+    height: 100%;
+    width: 900px;
+    font-size: 10px;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    
 }
+
 #slideshow {
     background:whitesmoke;
     grid-area: sh;
     border: solid 2px grey;
-
-
 }
+
 #news_link_box {
     display: flex;
     justify-content: flex-start;
     height: 40px;
     width: 500px;
 }
+
 #links_news { 
     font-size: 16px;
 }
-#information{
-    display: flex;
-    grid-area: if;
-    background-image: url("athletics_arena.jpg");
-
-}
-
 #arragemang {
     display: flex;
     grid-area: va;
@@ -152,12 +154,83 @@ h1 {
     flex-direction: row-reverse;
 }
 
-#arragemang_rubrik{
+#friidrott_ruta {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    width: 400px;
+    border: solid 1px black;
+    border-radius: 20px;
+    border-bottom: 5px solid black;
+}
+
+#friidrott_rubrik{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 24px;
+    border: 1px solid black;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-radius: 20px;
+    border-radius: 20px;
+    height: 100px;
+    width: 300px;
+}
+
+#bilder_pa_friidrott {
+    height: 250px;
+    width: 300px;
+    border: 1px solid black;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-radius: 20px;
+}
+#arragemang_ruta {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+    width: 400px;
+    border: solid 1px black;
+    border-radius: 20px;
+    border-bottom: 5px solid black;
+}
+
+#arragemang_rubrik{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    border: 1px solid black;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-radius: 20px;
+    border-radius: 20px;
+    height: 100px;
+    width: 300px;
+}
+
+#bilder_pa_arragemang {
+    height: 250px;
+    width: 300px;
+    border: 1px solid black;
+    border-top: 5px solid black;
+    border-right: 5px solid black;
+    border-radius: 20px;
 }
 #friidrott_rubrik{
     font-size: 24px;
 }
+
+#varldmasterskapen {
+    background-image: url('img/athletics_arena.jpg');
+    height: 500px;
+}
+
 #sponsorer {
     display: flex;
     grid-area: sp;
@@ -170,15 +243,107 @@ footer{
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
-    background: rgb(44, 43, 43);
+    background: rgb(32, 32, 32);
     border-top: solid 2px grey;
 }
 
+#adress_section {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+#kontakt_section {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    justify-content: flex-start;
+    flex-direction: column;
+
+}
+#mf_section {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    justify-content: flex-start;
+    flex-direction: column;
+
+}
+#sociala_m_section {
+    display: flex;
+    height: 200px;
+    width: 200px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.footer_rubrik {
+    font-size: 18px; 
+    color: grey;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text_footer {
+    font-size: 16px;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#logo {
+    display: flex;
+    width: 200px;
+    height: 150px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.fa {
+    font-size: 30px;
+    padding: 12px;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+  
+.fa:hover {
+    opacity: 0.7;
+}
+  
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+  
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #ea14bc;
+    color: white;
+}
+  
+
+  
+.fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+  
 #container{ 
     display: grid;
     height: 400vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 100px 1500px 1180px 400px;
+    grid-template-rows: 80px 1500px 1180px 300px;
     grid-template-areas: 
     "he he"   
     "om om"
@@ -296,6 +461,159 @@ p{
     border-bottom: 3px solid #1f2a1f;
     border-top-left-radius: 27px;
     border-top-right-radius: 27px;
+}
+
+
+
+header {
+    grid-area: he;
+    background-color: #3a3a3a;
+    color: #fff;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+header h1 {
+    margin: 0;
+}
+  
+#links {
+    display: flex;
+    align-items: center;
+}
+  
+#links a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+  
+#links a:hover {
+    color: #f1f1f1;
+}
+  
+ 
+#event_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 800px 300px;
+    grid-template-areas: 
+    "he he"
+    "ca ev"
+    "fo fo";
+}
+  
+#calendar {
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    grid-area: ca;
+}
+  
+#calendar h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+  
+#calendar_container {
+    display: grid;
+    grid-gap: 0.5rem;
+}
+
+.day {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+  
+.current-day {
+    background-color: #3a3a3a;
+    color: #fff;
+}
+  
+.day:hover {
+    background-color: #ddd;
+}
+  
+.day .date {
+    font-size: 1.2rem;
+}
+  
+#events {
+    grid-area: ev;
+    background-color: #f1f1f1;
+    padding: 2rem;
+}
+  
+#events h1 {
+    margin: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+  
+#events_list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    margin: 0 auto;
+}
+  
+#events_list li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+}
+  
+#events_list li h2 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+  
+#events_list li p {
+    margin: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+  
+table{
+    background-color: lightgrey;
+    padding: 10px;
+    height: 70%;
+    width: 80%;
+}
+
+td:hover {
+    background: rgb(232, 232, 232);
+}
+th,td {
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+tr{
+    text-align: center;
+}
+
+#rubrik_kalender {
+    font-size: 25px;
+    align-items: center;
+    color: orange;
 }
 
 @media screen and (max-width: 800px) {

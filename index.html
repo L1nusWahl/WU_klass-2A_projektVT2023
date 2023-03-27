@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>JHF</title>
     <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 
@@ -13,14 +14,18 @@
     <div id="grid_wrapper">
         <header>
             <h1>JHF</h1>
-            <ul>
-                <div id="links">
-                    <a href="#">BILDER</a>
-                    <a href="#">KONTAKT</a>
-                    <a href="#">ÖVRIGT</a>
-                    <a href="#">HEM</a>
-                </div> 
-            </ul>
+            
+            <section id="links">
+                <a href="index.html">Start</a>
+                <a href="#">Arragemang</a>
+                <a href="#">Friidrottskola</a>
+                <a href="Events.html">Tävling</a>
+                <a href="#">Bli Medlem</a>
+                <a href="om_oss.html">Om JHF Friidrott</a>
+                <a href="#">Galleri</a>
+                <a href="#">Sponsra JHF Friidrott</a>
+            </section> 
+           
         </header>
 
 
@@ -28,13 +33,13 @@
             
             <img id="slideshow" alt="Slideshow">
 
-            <div id="information_rutor">
+            <section id="information_rutor">
                 <article class="information_ruta">
                     <div class="bild_ruta_ring">
                         <article class="bild_ruta"><img src="img/relay.jpg" alt="relay_bild" id="information_bild"></article>
                     </div>
                     <article class="text_ruta">
-                        <div id="information_text">
+                        <div class="information_text">
                             <p class="datum">16 MARS, 2023</p>
                             <h1>Lag SM flyttad till 8 Juni</h1>
                         </div>
@@ -45,7 +50,7 @@
                         <article class="bild_ruta"><img src="img/relay.jpg" alt="relay_bild" id="information_bild"></article>
                     </div>
                     <article class="text_ruta">
-                        <div id="information_text">
+                        <div class="information_text">
                             <p class="datum">16 MARS, 2023</p>
                             <h1>Lag SM flyttad till 8 Juni</h1>
                         </div>
@@ -56,7 +61,7 @@
                         <article class="bild_ruta"><img src="img/relay.jpg" alt="relay_bild" id="information_bild"></article>
                     </div>
                     <article class="text_ruta">
-                        <div id="information_text">
+                        <div class="information_text">
                             <p class="datum">16 MARS, 2023</p>
                             <h1>Lag SM flyttad till 8 Juni</h1>
                         </div>
@@ -67,7 +72,7 @@
                         <article class="bild_ruta"><img src="img/relay.jpg" alt="relay_bild" id="information_bild"></article>
                     </div>
                     <article class="text_ruta">
-                        <div id="information_text">
+                        <div class="information_text">
                             <p class="datum">16 MARS, 2023</p>
                             <h1>Lag SM flyttad till 8 Juni</h1>
                         </div>
@@ -78,7 +83,7 @@
                         <article class="bild_ruta"><img src="img/relay.jpg" alt="relay_bild" id="information_bild"></article>
                     </div>
                     <article class="text_ruta">
-                        <div id="information_text">
+                        <div class="information_text">
                             <p class="datum">16 MARS, 2023</p>
                             <h1>Lag SM flyttad till 8 Juni</h1>
                         </div>
@@ -88,20 +93,29 @@
                     <a id="links_news" href="#">Se alla nyheter</a>
                 </article>
 
-            </div>
+            </section>
             
         </section>
 
         <section id="arragemang">
-            <div id="friidrott_ruta">
+            <article id="friidrott_ruta">
                 <h1 id="friidrott_rubrik">Börja träna friidrott</h1>
-            </div>
-            <div id="arragemang_ruta">
+                <section id="bilder_pa_friidrott">
+                    <img src="" alt=""><img src="" alt=""><img src="" alt="">
+                </section>
+            
+            </article>
+           
+            <article id="arragemang_ruta">
                 <h1 id="arragemang_rubrik">Arragemang</h1>
-            </div>
+                <section id="bilder_pa_arragemang">
+                    <img src="" alt=""><img src="" alt=""><img src="" alt="">
+                </section>
+            </article>
+       
         </section>
 
-        <section id="information">
+        <section id="varldmasterskapen">
         
         </section>
 
@@ -111,28 +125,34 @@
         </section>
 
         <footer>
-            <section>
-                <h1>Adress:</h1>
-                <p></p>
-                <p></p>
-                <p></p>
-
+            <section id="adress_section">
+                <h1 class="footer_rubrik">ADRESS</h1>
+                <p class="text_footer"> Friidrottens Väg 7</p>
+                <p class="text_footer">414 76 Göteborg</p>
+                <p class="text_footer"></p>
             </section>
-            <section>
-                <h1>Kontakt:</h1>
-                <p>Telefon: 073-075 61 34</p>
-                <p>E-post: friidrott@jhf.se</p>
-
+            <section id="kontakt_section">
+                <h1 class="footer_rubrik">KONTAKT</h1>
+                <p class="text_footer">Telefon: 073-075 61 34</p>
+                <p class="text_footer">E-post: friidrott@jhf.se</p>
+    
             </section>
-            <section>
-                <h1>Medlemsföreningar:</h1>
-                <p>JHF Friidrott</p>
-                <p>JHF Brottning</p>
-                <p>JHF Fotboll</p>
-                <p>JHF Handboll</p>
-
+            <section id="mf_section">
+                <h1 class="footer_rubrik">MEDLEMSFÖRENINGAR</h1>
+                <p class="text_footer">JHF Friidrott</p>
+                <p class="text_footer">JHF Brottning</p>
+                <p class="text_footer">JHF Fotboll</p>
+                <p class="text_footer">JHF Handboll</p>
             </section>
-
+            <section id="sociala_m_section">
+                <h1 class="footer_rubrik">SOCIALA MEDIER</h1>
+                <section id="logo">
+                    <a href="#" class="fa fa-facebook"></a>
+                    <a href="#" class="fa fa-twitter"></a>
+                    <a href="#" class="fa fa-instagram"></a>
+                    <a href="#" class="fa fa-snapchat-ghost"></a>
+                </section>
+            </section>
         </footer>
 
         <script src="java/script.js"></script>
