@@ -9,13 +9,21 @@ function nextImage() {
 
 setInterval(nextImage, 5000); 
 
-const burger = document.getElementById('burger')
-const nav = document.getElementById('nav-links')
 
-function toggleMenu() {
-    burger.classList.toggle('burger_toggle')
-    nav.classList.toggle('nav_active')
-    
+const gallery = document.querySelector('.gallery');
+const button = document.querySelector('#load-more');
+
+const loadMoreImages = () => {
+  const newImages = document.createDocumentFragment();
+  for (let i = 1; i <= 6; i++) {
+    const img = document.createElement('img');
+    img.src = `image${i}.jpg`;
+    newImages.appendChild(img);
+  }
+  gallery.appendChild(newImages);
 }
 
-burger.addEventListener('click', toggleMenu)
+button.addEventListener('click', loadMoreImages);
+
+
+

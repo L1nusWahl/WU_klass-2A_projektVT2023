@@ -32,6 +32,8 @@ header{
     justify-content: space-between;
     align-items: center;
     border-bottom: solid 2px rgb(0, 0, 0);
+    color: #fff;
+    padding: 1rem;
 }
 
 
@@ -227,10 +229,43 @@ h1 {
 }
 
 #varldmasterskapen {
-    background-image: url('img/athletics_arena.jpg');
-    height: 500px;
+    display: flex;
+    background-image: url('../img/athletics_arena.jpg');
+    background-size: cover;
+    grid-area: if;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
+#varldmasterskapen_text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.varldmasterskapen_rubrik {
+    font-size: 40px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+#lank_ruta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 250px;
+    background: rgb(108, 4, 4);
+}
+
+#lank_varldsungdomspelen{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
 #sponsorer {
     display: flex;
     grid-area: sp;
@@ -268,13 +303,13 @@ footer{
     width: 200px;
     justify-content: flex-start;
     flex-direction: column;
-
 }
+
 #sociala_m_section {
     display: flex;
     height: 200px;
     width: 200px;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: row;
     flex-wrap: wrap;
 
@@ -297,7 +332,7 @@ footer{
     width: 200px;
     height: 150px;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-end;
 }
 
 .fa {
@@ -329,8 +364,6 @@ footer{
     color: white;
 }
   
-
-  
 .fa-snapchat-ghost {
     background: #fffc00;
     color: white;
@@ -350,6 +383,7 @@ footer{
     "sa sa"
     "fo fo";
 }
+
 #om_oss_header{ 
     display: flex;
     grid-area: he;
@@ -392,6 +426,7 @@ footer{
 #om_oss_rubrik {
     font-size: 26px;
 }
+
 #google_maps {
     height: 900px;
     width: 500px;
@@ -410,23 +445,51 @@ p{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 1.5rem;
     color: #DEDEDE;
     text-decoration: none;
 }
 
-#section_anstallda{
+#anstallda_om_oss_text{
     display: flex;
-    grid-area: sa;
+    background-color: whitesmoke;
+    justify-content: center;
     align-items: center;
-    background: whitesmoke;
     flex-direction: column;
+    grid-area: sa;
 }
+
 
 #vi_som_jobbar_har {
     display: flex;
-    background-color: whitesmoke;
+    height: 1000px;
+    width: 1000px;
+    border: solid 2px black;
+    padding: 30px;
+    justify-content: space-between;
+    background-color: white;
+    flex-direction: column;
+    align-items: center;
+}
+
+#arbetare_rutor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 600px;
+}
+
+#om_jhf {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 500;
+    width: 800px;
+    border: solid 1px black;
 }
 #Kontakta_oss { 
     display: block;
@@ -437,18 +500,19 @@ p{
 .arbetare {
     display: flex;
     width: 150px;
-    height: 300px;
+    height: 250px;
     border: 3px solid #1f2a1f;
     background-color: white;
     flex-direction: column ;
     align-items: center;
     justify-content: flex-start;
-    margin: 30px; 
+    margin: 20px; 
     border-radius: 10px;
 }
 
 #arbetare_text {
     display: flex;
+    height: 200px;
     justify-content: center;
     flex-direction: column;
     padding: 10px;
@@ -462,8 +526,6 @@ p{
     border-top-left-radius: 27px;
     border-top-right-radius: 27px;
 }
-
-
 
 header {
     grid-area: he;
@@ -600,10 +662,10 @@ table{
 td:hover {
     background: rgb(232, 232, 232);
 }
+
 th,td {
     font-weight: bold;
     font-size: 18px;
-
 }
 
 tr{
@@ -616,20 +678,371 @@ tr{
     color: orange;
 }
 
+#galleri_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 1000px 300px;
+    grid-template-areas: 
+    "he he"
+    "ma ma" 
+    "fo fo";
+}
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 20px;
+    grid-area: ma;
+}
+  
+#galleri {
+    text-align: center;
+    font-size: 36px;
+}
+  
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+  
+.gallery img {
+    width: calc(33.33% - 10px);
+    margin-bottom: 20px;
+}
+  
+#load-more {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    cursor: pointer;
+}
+  
+#load-more:hover {
+    background-color: #333;
+}
+
+nav {
+    display: none;
+}
+
 @media screen and (max-width: 800px) {
+
+    *{
+        margin: 0px;
+        padding: 0px;
+        max-height: fit-content;
+        box-sizing: border-box;
+       
+    }
+
     #grid_wrapper{
         display: grid;
-        height: 400vh;
-        grid-template-columns: minmax(200px, 1fr) 200px;
-        grid-template-rows: 80px 1000px 850px 500px 400px 200px ;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 800px 175px 1000px 500px;
         grid-template-areas:
         "he he"
         "se se"
-        "va va"
         "if if"
-        "sp sp"
+        "va va"
         "fo fo";
     }
+
+    #links a{
+        font-size: 9px;
+    }
+
+
+    header{
+        display: flex;
+        grid-area: he;
+        background: linear-gradient(90deg, #ab058b, indigo);
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: solid 2px rgb(0, 0, 0);
+    }
+    
+    #background_img {
+        width: 100%;
+        height: auto; 
+    }
+    
+    #slideshow_news{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        grid-area: se;
+        background: whitesmoke;
+    }
+    
+    #information_bild{
+        width: 100%;
+        height: auto;
+    }
+    
+    #information_rutor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 400px;
+        width: 400px;
+        flex-direction: column;
+    }
+    
+    .bild_ruta {
+        height: 60px;
+        width: 95px;
+        border: solid 1px grey;
+    }
+    
+    .bild_ruta_ring  {
+        display: flex;
+        height: 70px;
+        width: 105px;
+        justify-content: center;
+        align-items: center;
+        border: solid 1px grey;
+    }
+    
+    .information_ruta {
+        display: flex;
+        width: 320px;
+        height: 105px;
+        flex-direction: row;
+        justify-content: space-between;
+        background: whitesmoke;
+    }
+    
+    .information_ruta:hover {
+        border: solid 1px black;
+        background: white;
+    }
+    .text_ruta {
+        display: flex;
+        height: 80px;
+        width: 200px;
+        justify-content: center;
+        border-bottom: solid 1px grey;
+    }
+    .information_text {
+        display: flex;
+        padding: 5px;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 70px;
+        width: 200px;
+    }
+    .datum {
+        font-size: 13px;
+        font-style: none;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h1 {
+        display: flex;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    #links {
+        display: flex;
+        height: 100%;
+        width: 300px;
+        font-size: 10px;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    #slideshow {
+        background:whitesmoke;
+        grid-area: sh;
+        border: solid 2px grey;
+    }
+    
+    #news_link_box {
+        display: flex;
+        justify-content: flex-start;
+        height: 40px;
+        width: 300px;
+    }
+    
+    #links_news { 
+        font-size: 16px;
+    }
+    #arragemang {
+        display: flex;
+        grid-area: va;
+        background: whitesmoke;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column-reverse;
+    }
+    
+    #friidrott_ruta {
+        display: flex;
+        height: auto;
+        background-color: white;
+        width: 350px;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        border: solid 1px black;
+        border-radius: 20px;
+        padding: 10px;
+    }
+    
+    #friidrott_rubrik{
+        display: flex;
+        align-items: center;
+        background-color: whitesmoke;
+        justify-content: center;
+        font-size: 24px;
+        border: 1px solid black;
+        border-radius: 20px;
+        border-radius: 20px;
+        margin: 20px;
+        height: auto;
+        width: 300px;
+    }
+    
+    #bilder_pa_friidrott {
+        height: auto;
+        background-color: white;
+        width: 100%;
+        border: black solid 1px;
+        border-radius: 10px;
+        margin: 5px;
+    }
+
+    .bilder_pa_arragemang{
+        height: auto;
+        background-color: white;
+        width: 100%;
+        border: black solid 1px;
+        border-radius: 10px;
+        margin: 5px;
+    }
+    #arragemang_ruta {
+        display: flex;
+        height: auto;
+        background-color: white;
+        width: 350px;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        border: solid 1px black;
+        border-radius: 20px;
+        padding: 10px;
+    }
+    
+    #arragemang_rubrik{
+        display: flex;
+        align-items: center;
+        background-color: whitesmoke;
+        justify-content: center;
+        font-size: 24px;
+        border: 1px solid black;
+        border-radius: 20px;
+        border-radius: 20px;
+        margin: 20px;
+        height: auto;
+        width: 200px;
+    }
+
+    button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 40%;
+        font-size: 10px;
+        border: solid 1px black;
+        border-radius: 30px;
+        background-color: indigo;
+    }
+
+    #button_text{
+        font-size: 20px;
+        color: white;
+
+    }
+    #bilder{
+        display: flex;
+        justify-content: center;
+        border: white;
+        width: 90px;
+    }
+    
+    #bilder_pa_arragemang {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
+        height: auto;
+        width: 300px;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+    #friidrott_rubrik{
+        font-size: 24px;
+    }
+    
+    #varldmasterskapen {
+        display: flex;
+        background-image: url('../img/athletics_arena.jpg');
+        background-size: cover;
+        grid-area: if;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    
+    #varldmasterskapen_text {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+       
+    }
+    
+    .varldmasterskapen_rubrik {
+        font-size: 25px;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+    }
+    
+    #lank_ruta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        width: 230px;
+        background: rgb(108, 4, 4);
+    }
+    
+    #lank_varldsungdomspelen{
+        font-size: 20px;
+        text-decoration: none;
+        color: black;
+    }
+    
+    footer{
+        display: flex;
+        padding: 20px;
+        grid-area: fo;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgb(32, 32, 32);
+        border-top: solid 2px grey;
+    }
+
 
     #slideshow_news{
         display: flex;
@@ -637,12 +1050,373 @@ tr{
         justify-content: space-evenly;
         align-items: center;
         grid-area: se;
-        background: rgb(194, 177, 194);
+        background: whitesmoke;
     }
 
     #slideshow {
-        height: 300px;
-        width: 500px;
+        height: 200px;
+        width: 350px;
         background-image: url('img/hurdle.jpg');
     }
+
+    #adress_section {
+        display: flex;
+        height: 100px;
+        width: 200px;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    #kontakt_section {
+        display: flex;
+        height: 100px;
+        width: 200px;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    #mf_section {
+        display: flex;
+        height: 150px;
+        width: 100px;
+        justify-content: flex-start;
+        flex-direction: column;
+    
+    }
+    #sociala_m_section {
+        display: flex;
+        height: 100px;
+        width: 200px;
+        justify-content: flex-start;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .footer_rubrik {
+        font-size: 13px; 
+        color: grey;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .text_footer {
+        display: flex;
+        font-size: 10px;
+        color: white;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    #logo {
+        display: flex;
+        width: 200px;
+        height: 20px;
+        justify-content: space-evenly;
+    }
+    
+    .fa {
+        font-size: 15px;
+        padding: 3px;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+    }
+      
+    .fa:hover {
+        opacity: 0.7;
+    }
+      
+    .fa-facebook {
+        background: #3B5998;
+        color: white;
+    }
+      
+    .fa-twitter {
+        background: #55ACEE;
+        color: white;
+    }
+    
+    .fa-instagram {
+        background: #ea14bc;
+        color: white;
+    }
+      
+    .fa-snapchat-ghost {
+        background: #fffc00;
+        color: white;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    }
+
+    #container{ 
+        display: grid;
+        height: 400vh;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 1500px 2000px 700px;
+        grid-template-areas: 
+        "he he"   
+        "om om"
+        "sa sa"
+        "fo fo";
+    }
+
+    #om_oss_header{ 
+        display: flex;
+        grid-area: he;
+        background: linear-gradient(90deg, #ab058b, indigo);
+        justify-content: flex-end;
+        align-items: center;
+    }
+    
+    #Om_oss{ 
+        display: flex;
+        grid-area: om;
+        background: whitesmoke;
+        flex-direction: column;
+        padding: 30px;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    
+    #text_om_oss { 
+        display: flex;
+        width: 400px;
+        height: 1500px;
+        flex-direction: column;
+        align-items: flex-start;
+        border: solid 1px grey;
+        background-color: white;
+        padding: 30px;
+        margin: 20px;
+        color: black;
+    }
+    
+    #person_bild {
+        width: 100%;
+        height: auto;
+        border: solid 1px grey;
+    }
+    
+    #om_oss_rubrik {
+        font-size: 26px;
+    }
+   
+    #google_maps {
+        height: 900px;
+        width: 400px;
+        border: solid 1px grey;
+    }
+    
+    p{
+        display: flex;
+        margin-block-start: 1rem;
+        margin-block-end: 1rem;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+    }
+    
+    #link {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 1.5rem;
+        color: #DEDEDE;
+        text-decoration: none;
+    }
+    
+    #anstallda_om_oss_text{
+        display: flex;
+        background-color: whitesmoke;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        grid-area: sa;
+    }
+
+    
+    #vi_som_jobbar_har {
+        display: flex;
+        height: auto;
+        width: 350px;
+        border: solid 2px black;
+        justify-content: space-between;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    #arbetare_rutor {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 350px;
+        height: auto;
+    }
+    
+    #om_jhf {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+        width: 300px;
+        border: solid 1px black;
+    }
+    #Kontakta_oss { 
+        display: block;
+        margin-block-start: 2rem;
+        color: #DEDEDE;
+    }
+    
+    .arbetare {
+        display: flex;
+        width: 120px;
+        height: 250px;
+        border: 3px solid #1f2a1f;
+        background-color: white;
+        flex-direction: column ;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 20px; 
+        border-radius: 10px;
+    }
+    
+    #arbetare_text {
+        display: flex;
+        height: 200px;
+        justify-content: center;
+        flex-direction: column;
+        padding: 10px;
+        align-items: center;
+    }
+        
+    #bild_anstalld { 
+        height: auto;
+        width: 100%;
+        border-bottom: 3px solid #1f2a1f;
+        border-top-left-radius: 27px;
+        border-top-right-radius: 27px;
+    }
+
+    #event_wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 900px 700px;
+        grid-template-areas: 
+        "he he"
+        "ca ev"
+        "fo fo";
+    }
+      
+    #calendar {
+        background-color: #ddd;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        grid-area: ca;
+    }
+      
+    #calendar h1 {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+      
+    #calendar_container {
+        display: grid;
+        grid-gap: 0.5rem;
+    }
+    
+    .day {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fff;
+        padding: 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+      
+    .current-day {
+        background-color: #3a3a3a;
+        color: #fff;
+    }
+      
+    .day:hover {
+        background-color: #ddd;
+    }
+      
+    .day .date {
+        font-size: 1.2rem;
+    }
+      
+    #events {
+        grid-area: ev;
+        background-color: #f1f1f1;
+        padding: 2rem;
+    }
+      
+    #events h1 {
+        margin: 0;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+      
+    #events_list {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-gap: 2rem;
+        margin: 0 auto;
+    }
+      
+    #events_list li {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+      
+    #events_list li h2 {
+        margin: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+    }
+      
+    #events_list li p {
+        margin: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+      
+    table{
+        background-color: lightgrey;
+        padding: 10px;
+        height: 70%;
+        width: 80%;
+    }
+    
+    td:hover {
+        background: rgb(232, 232, 232);
+    }
+    
+    th,td {
+        font-weight: bold;
+        font-size: 18px;
+    }
+    
+    tr{
+        text-align: center;
+    }
+    
+    #rubrik_kalender {
+        font-size: 25px;
+        align-items: center;
+        color: orange;
+    }
+
+    
 }
