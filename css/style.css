@@ -3,6 +3,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    
    
 }
 
@@ -191,7 +192,7 @@ h1 {
     color: black;
     font-size: 16px;
 }
-#arragemang {
+#arrangemang {
     display: flex;
     grid-area: va;
     background: whitesmoke;
@@ -250,7 +251,7 @@ h1 {
     margin: 5px;
 }
 
-.bilder_pa_arragemang{
+.bilder_pa_arrangemang{
     height: auto;
     background-color: white;
     width: 100%;
@@ -258,7 +259,7 @@ h1 {
     border-radius: 10px;
     margin: 5px;
 }
-#arragemang_ruta {
+#arrangemang_ruta {
     display: flex;
     height: auto;
     background-color: indigo;
@@ -271,7 +272,7 @@ h1 {
     padding: 10px;
 }
 
-#arragemang_rubrik{
+#arrangemang_rubrik{
     display: flex;
     align-items: center;
     background-color: rgb(124, 80, 158);
@@ -311,7 +312,7 @@ button{
     width: 90px;
 }
 
-#bilder_pa_arragemang {
+#bilder_pa_arrangemang {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -515,6 +516,7 @@ footer{
     height: 1500px;
     flex-direction: column;
     align-items: flex-start;
+    border-radius: 10px;
     border: solid 1px grey;
     background-color: white;
     padding: 30px;
@@ -535,6 +537,7 @@ footer{
 #google_maps {
     height: 900px;
     width: 400px;
+    border-radius: 10px;
     border: solid 1px grey;
 }
 
@@ -571,6 +574,7 @@ p{
     height: auto;
     width: 350px;
     border: solid 2px black;
+    border-radius: 10px;
     justify-content: space-between;
     background-color: white;
     flex-direction: column;
@@ -593,8 +597,10 @@ p{
     padding: 10px;
     height: auto;
     width: 300px;
+    border-radius: 10px;
     border: solid 1px black;
 }
+
 #Kontakta_oss { 
     display: block;
     margin-block-start: 2rem;
@@ -634,10 +640,11 @@ p{
 #event_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 900px 500px;
+    grid-template-rows: 80px 500px 900px 500px;
     grid-template-areas: 
     "he na"
-    "ca ev"
+    "ca ca"
+    "ev ev"
     "fo fo";
 }
   
@@ -1102,7 +1109,7 @@ nav {
         color: rgb(168, 108, 55);
         font-size: 16px;
     }
-    #arragemang {
+    #arrangemang {
         display: flex;
         grid-area: va;
         background: whitesmoke;
@@ -1161,7 +1168,7 @@ nav {
         margin: 5px;
     }
     
-    .bilder_pa_arragemang{
+    .bilder_pa_arrangemang{
         height: auto;
         background-color: white;
         width: 100%;
@@ -1169,7 +1176,7 @@ nav {
         border-radius: 10px;
         margin: 5px;
     }
-    #arragemang_ruta {
+    #arrangemang_ruta {
         display: flex;
         height: 500px;
         background-color: indigo;
@@ -1182,7 +1189,7 @@ nav {
         padding: 10px;
     }
     
-    #arragemang_rubrik{
+    #arrangemang_rubrik{
         display: flex;
         align-items: center;
         background-color: rgb(124, 80, 158);
@@ -1222,7 +1229,7 @@ nav {
         width: 100px;
     }
     
-    #bilder_pa_arragemang {
+    #bilder_pa_arrangemang {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -1297,7 +1304,6 @@ nav {
         width: 200px;
         justify-content: flex-start;
         flex-direction: column;
-    
     }
     #mf_section {
         display: flex;
@@ -1379,7 +1385,7 @@ nav {
         display: grid;
         height: 400vh;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 1500px 2300px 300px;
+        grid-template-rows: 80px 1500px 1600px 300px;
         grid-template-areas: 
         "he he"   
         "om om"
@@ -1400,7 +1406,7 @@ nav {
         display: flex;
         grid-area: om;
         background: whitesmoke;
-        flex-direction: row;
+        flex-direction: row-reverse;
         padding: 30px;
         align-items: center;
         justify-content: space-evenly;
