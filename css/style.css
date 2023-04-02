@@ -2,27 +2,81 @@
 *{
     margin: 0px;
     padding: 0px;
-    max-height: fit-content;
     box-sizing: border-box;
    
 }
 
 #grid_wrapper{
     display: grid;
-    height: 400vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 550px 850px 300px 500px 300px;
+    grid-template-rows: 80px 800px 200px 1000px 500px;
     grid-template-areas:
-    "he he"
+    "he na"
     "se se"
-    "va va"
     "if if"
-    "sp sp"
+    "va va"
     "fo fo";
 }
 
-h2 {
-    font-size: 18px;
+#links a{
+    font-size: 9px;
+}
+
+#burger div {
+    display: flex;
+    height: 5px;
+    width: 30px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+#nav-links {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 200px;
+    background-color: rgb(106, 149, 106) ;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: -500px;
+    right: 0px;
+    transition: all 0.5s;
+}
+
+#nav-links li{
+    list-style: none;
+}
+#nav-links a{
+   text-decoration: none;
+   font-size: 1.25rem;
+   letter-spacing: 0.1875rem;
+   color: black;
+   font-family: 'Courier New', Courier, monospace;
+   font-weight: bold;
+}
+
+#burger {
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.burger_toggle #burger_line_2 {
+    opacity: 0;
+}
+
+.burger_toggle #burger_line_1 {
+    transform: rotate(-45deg) translate(-8px, 6px);  
+}
+
+.burger_toggle #burger_line_3 {
+    transform: rotate(45deg) translate(-8px, -6px);
+}
+
+.nav_active {
+    transform: translateY(580px);
 }
 
 header{
@@ -31,20 +85,13 @@ header{
     background: linear-gradient(90deg, #ab058b, indigo);
     justify-content: space-between;
     align-items: center;
-    border-bottom: solid 2px rgb(0, 0, 0);
     color: #fff;
     padding: 1rem;
 }
 
-
 #background_img {
     width: 100%;
-    height: auto; 
-}
-
-#slideshow {
-    height: 400px;
-    width: 650px;
+    height: 100%; 
 }
 
 #slideshow_news{
@@ -56,30 +103,23 @@ header{
 }
 
 #information_bild{
-    width: 100%;
-    height: auto;
+    width: 80px;
+    height: 60px;
+    border: solid 1px grey;
 }
 
 #information_rutor {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 500px;
-    width: 500px;
+    justify-content: space-evenly;
+    width: 200px;
     flex-direction: column;
-    
-}
-
-.bild_ruta {
-    height: 60px;
-    width: 95px;
-    border: solid 1px grey;
 }
 
 .bild_ruta_ring  {
     display: flex;
-    height: 70px;
-    width: 105px;
+    height: 80px;
+    width: 100px;
     justify-content: center;
     align-items: center;
     border: solid 1px grey;
@@ -87,8 +127,8 @@ header{
 
 .information_ruta {
     display: flex;
-    width: 500px;
-    height: 80px;
+    width: 320px;
+    height: 105px;
     flex-direction: row;
     justify-content: space-between;
     background: whitesmoke;
@@ -100,8 +140,8 @@ header{
 }
 .text_ruta {
     display: flex;
-    height: 70px;
-    width: 375px;
+    height: 80px;
+    width: 200px;
     justify-content: center;
     border-bottom: solid 1px grey;
 }
@@ -110,22 +150,23 @@ header{
     padding: 5px;
     flex-direction: column;
     justify-content: space-between;
-    height: 52px;
-    width: 400px;
+    height: 70px;
+    width: 200px;
 }
 .datum {
     font-size: 13px;
-    font-style: none;
+    text-decoration: none;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 h1 {
     display: flex;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 #links {
     display: flex;
     height: 100%;
-    width: 900px;
+    width: 300px;
     font-size: 10px;
     flex-direction: row;
     justify-content: space-evenly;
@@ -142,86 +183,144 @@ h1 {
     display: flex;
     justify-content: flex-start;
     height: 40px;
-    width: 500px;
+    width: 300px;
 }
 
 #links_news { 
+    text-decoration: none;
+    color: black;
     font-size: 16px;
 }
 #arragemang {
     display: flex;
     grid-area: va;
     background: whitesmoke;
+    align-items: center;
     justify-content: space-evenly;
-    flex-direction: row-reverse;
+    flex-direction: column-reverse;
 }
 
 #friidrott_ruta {
     display: flex;
+    height: auto;
+    background-color: indigo;
+    width: 350px;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    height: 500px;
-    width: 400px;
     border: solid 1px black;
     border-radius: 20px;
-    border-bottom: 5px solid black;
+    padding: 10px;
 }
 
 #friidrott_rubrik{
     display: flex;
     align-items: center;
+    background-color: rgb(124, 80, 158);
     justify-content: center;
     font-size: 24px;
+    color: white;
     border: 1px solid black;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
     border-radius: 20px;
     border-radius: 20px;
-    height: 100px;
+    margin: 20px;
+    height: auto;
     width: 300px;
 }
 
 #bilder_pa_friidrott {
-    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(124, 80, 158);
+    padding: 10px;
+    height: auto;
     width: 300px;
     border: 1px solid black;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
     border-radius: 20px;
+}
+
+.bilder_pa_friidrott {
+    height: auto;
+    background-color: white;
+    width: 100%;
+    border: black solid 1px;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.bilder_pa_arragemang{
+    height: auto;
+    background-color: white;
+    width: 100%;
+    border: black solid 1px;
+    border-radius: 10px;
+    margin: 5px;
 }
 #arragemang_ruta {
     display: flex;
+    height: auto;
+    background-color: indigo;
+    width: 350px;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    height: 500px;
-    width: 400px;
     border: solid 1px black;
     border-radius: 20px;
-    border-bottom: 5px solid black;
+    padding: 10px;
 }
 
 #arragemang_rubrik{
     display: flex;
     align-items: center;
+    background-color: rgb(124, 80, 158);
     justify-content: center;
     font-size: 24px;
+    color: white;
     border: 1px solid black;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
     border-radius: 20px;
     border-radius: 20px;
-    height: 100px;
-    width: 300px;
+    margin: 20px;
+    height: auto;
+    width: 200px;
+}
+
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 40%;
+    font-size: 10px;
+    border: solid 1px black;
+    border-radius: 30px;
+    background-color: indigo;
+}
+
+#button_text{
+    font-size: 20px;
+    color: white;
+
+}
+
+.bilder{
+    display: flex;
+    justify-content: center;
+    border: white;
+    width: 90px;
 }
 
 #bilder_pa_arragemang {
-    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(124, 80, 158);
+    padding: 10px;
+    height: auto;
     width: 300px;
     border: 1px solid black;
-    border-top: 5px solid black;
-    border-right: 5px solid black;
     border-radius: 20px;
 }
 #friidrott_rubrik{
@@ -247,7 +346,7 @@ h1 {
 }
 
 .varldmasterskapen_rubrik {
-    font-size: 40px;
+    font-size: 25px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
 }
@@ -256,8 +355,8 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
-    width: 250px;
+    height: 70px;
+    width: 230px;
     background: rgb(108, 4, 4);
 }
 
@@ -266,63 +365,73 @@ h1 {
     text-decoration: none;
     color: black;
 }
-#sponsorer {
-    display: flex;
-    grid-area: sp;
-    background: whitesmoke;
-}
 
 footer{
     display: flex;
+    padding: 20px;
     grid-area: fo;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
     background: rgb(32, 32, 32);
     border-top: solid 2px grey;
 }
 
+
+#slideshow_news{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-area: se;
+    background: whitesmoke;
+}
+
+#slideshow {
+    height: 200px;
+    width: 350px;
+    background-image: url('img/hurdle.jpg');
+}
+
 #adress_section {
     display: flex;
-    height: 200px;
+    height: 100px;
     width: 200px;
     justify-content: flex-start;
     flex-direction: column;
 }
 #kontakt_section {
     display: flex;
-    height: 200px;
+    height: 100px;
     width: 200px;
-    justify-content: flex-start;
+    justify-content: space-around;
     flex-direction: column;
-
 }
 #mf_section {
     display: flex;
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 100px;
     justify-content: flex-start;
     flex-direction: column;
-}
 
+}
 #sociala_m_section {
     display: flex;
-    height: 200px;
+    height: 100px;
     width: 200px;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-
 }
 
 .footer_rubrik {
-    font-size: 18px; 
+    font-size: 13px; 
     color: grey;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .text_footer {
-    font-size: 16px;
+    display: flex;
+    font-size: 10px;
     color: white;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -330,16 +439,15 @@ footer{
 #logo {
     display: flex;
     width: 200px;
-    height: 150px;
+    padding: 40px;
     justify-content: space-evenly;
-    align-items: flex-end;
 }
 
 .fa {
-    font-size: 30px;
-    padding: 12px;
-    height: 40px;
-    width: 40px;
+    font-size: 15px;
+    padding: 3px;
+    height: 20px;
+    width: 20px;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
@@ -370,15 +478,13 @@ footer{
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-
-  
 #container{ 
     display: grid;
-    height: 400vh;
+    height: 300vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 1500px 1180px 300px;
+    grid-template-rows: 80px 1500px 2300px 500px;
     grid-template-areas: 
-    "he he"   
+    "he na"   
     "om om"
     "sa sa"
     "fo fo";
@@ -390,14 +496,13 @@ footer{
     background: linear-gradient(90deg, #ab058b, indigo);
     justify-content: flex-end;
     align-items: center;
-    padding-right: 30px;
 }
 
 #Om_oss{ 
     display: flex;
     grid-area: om;
     background: whitesmoke;
-    flex-direction: row;
+    flex-direction: column;
     padding: 30px;
     align-items: center;
     justify-content: space-evenly;
@@ -406,8 +511,8 @@ footer{
 
 #text_om_oss { 
     display: flex;
-    width: 500px;
-    height: 1300px;
+    width: 400px;
+    height: 1500px;
     flex-direction: column;
     align-items: flex-start;
     border: solid 1px grey;
@@ -429,7 +534,7 @@ footer{
 
 #google_maps {
     height: 900px;
-    width: 500px;
+    width: 400px;
     border: solid 1px grey;
 }
 
@@ -463,10 +568,9 @@ p{
 
 #vi_som_jobbar_har {
     display: flex;
-    height: 1000px;
-    width: 1000px;
+    height: auto;
+    width: 350px;
     border: solid 2px black;
-    padding: 30px;
     justify-content: space-between;
     background-color: white;
     flex-direction: column;
@@ -477,18 +581,18 @@ p{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: wrap;
-    width: 800px;
-    height: 600px;
+    width: 350px;
+    height: auto;
 }
 
 #om_jhf {
     display: flex;
     flex-direction: column;
     padding: 10px;
-    height: 500;
-    width: 800px;
+    height: auto;
+    width: 300px;
     border: solid 1px black;
 }
 #Kontakta_oss { 
@@ -499,7 +603,7 @@ p{
 
 .arbetare {
     display: flex;
-    width: 150px;
+    width: 120px;
     height: 250px;
     border: 3px solid #1f2a1f;
     background-color: white;
@@ -527,43 +631,12 @@ p{
     border-top-right-radius: 27px;
 }
 
-header {
-    grid-area: he;
-    background-color: #3a3a3a;
-    color: #fff;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-  
-header h1 {
-    margin: 0;
-}
-  
-#links {
-    display: flex;
-    align-items: center;
-}
-  
-#links a {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 1rem;
-    font-size: 1.2rem;
-}
-  
-#links a:hover {
-    color: #f1f1f1;
-}
-  
- 
 #event_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 800px 300px;
+    grid-template-rows: 80px 900px 500px;
     grid-template-areas: 
-    "he he"
+    "he na"
     "ca ev"
     "fo fo";
 }
@@ -678,75 +751,213 @@ tr{
     color: orange;
 }
 
-#galleri_grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 1000px 300px;
-    grid-template-areas: 
-    "he he"
-    "ma ma" 
-    "fo fo";
-}
-
-main {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-    margin: 0 auto;
-    padding: 20px;
-    grid-area: ma;
-}
-  
-#galleri {
-    text-align: center;
-    font-size: 36px;
-}
-  
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-  
-.gallery img {
-    width: calc(33.33% - 10px);
-    margin-bottom: 20px;
-}
-  
-#load-more {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    background-color: #555;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    font-size: 18px;
-    cursor: pointer;
-}
-  
-#load-more:hover {
-    background-color: #333;
-}
-
 nav {
+    display: flex;
+    background-color: indigo;
+    justify-content: flex-end;
+    align-items: center;
+    grid-area: na;
+}
+
+
+#burger div {
+    display: flex;
+    height: 5px;
+    width: 30px;
+    background-color: black;
+    margin: 5px;
+    border-radius: 10px;
+    transition: all 0.5s;
+}
+
+#nav-links {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100%;
+    border-top: solid 2px black;
+    background-color: indigo;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: -500px;
+    right: 0px;
+    transition: all 0.5s;
+}
+
+#links {
     display: none;
 }
 
-@media screen and (max-width: 800px) {
+#nav-links li{
+    list-style: none;
+}
+#nav-links a{
+   text-decoration: none;
+   font-size: 30px;
+   color: white;
+   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-weight: bold;
+}
 
-    *{
-        margin: 0px;
-        padding: 0px;
-        max-height: fit-content;
-        box-sizing: border-box;
-       
-    }
+#burger {
+    margin-right: 40px;
+    cursor: pointer;
+}
 
-    #grid_wrapper{
+.burger_toggle #burger_line_2 {
+    opacity: 0;
+}
+
+.burger_toggle #burger_line_1 {
+    transform: rotate(-45deg) translate(-8px, 6px);  
+}
+
+.burger_toggle #burger_line_3 {
+    transform: rotate(45deg) translate(-8px, -6px);
+}
+
+.nav_active {
+    transform: translateY(580px);
+}
+
+
+#main_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 80px 600px 1800px 500px;
+    grid-template-areas:
+    "he na"
+    "tf tf"
+    "ts ts"
+    "fo fo";
+}
+
+#trana_friidrott {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    background: whitesmoke;
+    grid-area: tf;
+}
+
+#bilder_friidrott {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 400px;
+}
+.bilden_till_friidrott {
+    border-radius: 20px;
+    width: 175px;
+    height: auto;
+}
+
+#trana_friidrott_text {
+    width: 300px;
+}
+
+#rubrik_trana_friidrott {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    padding: 20px;
+    width: 200px;
+    background-color: indigo;
+    border-radius: 20px;
+}
+
+#lank_friidrottskola {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 350px;
+    background-color: indigo;
+    border-radius: 20px;
+
+}
+
+#lank_till_friidrottskola {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+
+#tekniklager_friidrottskola {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background: whitesmoke;
+    flex-direction: column;
+    grid-area: ts;
+}
+
+#friidrottsskola_ruta {
+    display: flex;
+    height: auto;
+    background-color: indigo;
+    width: 350px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px black;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.ruta_rubrik {
+    display: flex;
+    align-items: center;
+    background-color: rgb(124, 80, 158);
+    justify-content: center;
+    font-size: 24px;
+    border: 1px solid black;
+    border-radius: 20px;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 20px;
+    width: 200px;
+}
+
+.ruta_for_text {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: auto;
+    width: 300px;
+    background: rgb(124, 80, 158);
+    border: solid 1px black;
+    border-radius: 20px;
+}
+
+#teknik_ruta {
+    display: flex;
+    height: auto;
+    background-color: indigo;
+    width: 350px;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px black;
+    border-radius: 20px;
+    padding: 10px;
+
+}
+
+
+@media screen and (min-width: 1000px) {
+
+    #grid_wrapper {
         display: grid;
+        height: 300vh;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 800px 175px 1000px 500px;
+        grid-template-rows: 80px 550px 300px 700px 300px;
         grid-template-areas:
         "he he"
         "se se"
@@ -754,11 +965,15 @@ nav {
         "va va"
         "fo fo";
     }
-
-    #links a{
-        font-size: 9px;
+    
+    h2 {
+        font-size: 25px;
     }
-
+    
+    nav {
+        display: none;
+        grid-area: na;
+    }
 
     header{
         display: flex;
@@ -767,16 +982,27 @@ nav {
         justify-content: space-between;
         align-items: center;
         border-bottom: solid 2px rgb(0, 0, 0);
+        color: #fff;
+        padding: 1rem;
     }
-    
+
+    nav {
+        display: none;
+    }
     #background_img {
         width: 100%;
         height: auto; 
     }
     
+    #slideshow {
+        height: 400px;
+        width: 650px;
+    }
+    
     #slideshow_news{
         display: flex;
         justify-content: space-evenly;
+        flex-direction: row;
         align-items: center;
         grid-area: se;
         background: whitesmoke;
@@ -784,16 +1010,16 @@ nav {
     
     #information_bild{
         width: 100%;
-        height: auto;
+        height: 100%;
     }
     
     #information_rutor {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 400px;
-        width: 400px;
-        flex-direction: column;
+        height: 500px;
+        width: 500px;
+        flex-direction: column;  
     }
     
     .bild_ruta {
@@ -813,8 +1039,8 @@ nav {
     
     .information_ruta {
         display: flex;
-        width: 320px;
-        height: 105px;
+        width: 500px;
+        height: 80px;
         flex-direction: row;
         justify-content: space-between;
         background: whitesmoke;
@@ -826,8 +1052,8 @@ nav {
     }
     .text_ruta {
         display: flex;
-        height: 80px;
-        width: 200px;
+        height: 70px;
+        width: 375px;
         justify-content: center;
         border-bottom: solid 1px grey;
     }
@@ -836,24 +1062,23 @@ nav {
         padding: 5px;
         flex-direction: column;
         justify-content: space-between;
-        height: 70px;
-        width: 200px;
+        height: 10px;
+        width: 400px;
     }
     .datum {
         font-size: 13px;
-        font-style: none;
+        text-decoration: none;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     h1 {
         display: flex;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
-
+    
     #links {
         display: flex;
         height: 100%;
-        width: 300px;
-        font-size: 10px;
+        width: 900px;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
@@ -869,10 +1094,12 @@ nav {
         display: flex;
         justify-content: flex-start;
         height: 40px;
-        width: 300px;
+        width: 500px;
     }
     
     #links_news { 
+        text-decoration: none;
+        color: rgb(168, 108, 55);
         font-size: 16px;
     }
     #arragemang {
@@ -881,14 +1108,14 @@ nav {
         background: whitesmoke;
         align-items: center;
         justify-content: space-evenly;
-        flex-direction: column-reverse;
+        flex-direction: row-reverse;
     }
     
     #friidrott_ruta {
         display: flex;
-        height: auto;
-        background-color: white;
-        width: 350px;
+        height: 500px;
+        background-color: indigo;
+        width: 400px;
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
@@ -900,18 +1127,32 @@ nav {
     #friidrott_rubrik{
         display: flex;
         align-items: center;
-        background-color: whitesmoke;
+        background-color: rgb(124, 80, 158);
         justify-content: center;
         font-size: 24px;
+        color: white;
         border: 1px solid black;
         border-radius: 20px;
         border-radius: 20px;
         margin: 20px;
-        height: auto;
+        height: 50px;
         width: 300px;
     }
     
     #bilder_pa_friidrott {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: rgb(124, 80, 158);
+        padding: 10px;
+        height: 300px;
+        width: 350px;
+        border: 1px solid black;
+        border-radius: 20px;
+    }
+    
+    .bilder_pa_friidrott {
         height: auto;
         background-color: white;
         width: 100%;
@@ -919,7 +1160,7 @@ nav {
         border-radius: 10px;
         margin: 5px;
     }
-
+    
     .bilder_pa_arragemang{
         height: auto;
         background-color: white;
@@ -930,9 +1171,9 @@ nav {
     }
     #arragemang_ruta {
         display: flex;
-        height: auto;
-        background-color: white;
-        width: 350px;
+        height: 500px;
+        background-color: indigo;
+        width: 400px;
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
@@ -944,39 +1185,41 @@ nav {
     #arragemang_rubrik{
         display: flex;
         align-items: center;
-        background-color: whitesmoke;
+        background-color: rgb(124, 80, 158);
         justify-content: center;
+        color: white;
         font-size: 24px;
         border: 1px solid black;
         border-radius: 20px;
         border-radius: 20px;
         margin: 20px;
-        height: auto;
-        width: 200px;
+        height: 50px;
+        width: 300px;
     }
-
+    
     button{
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100%;
-        width: 40%;
+        height: 50px;
+        width: 100px;
         font-size: 10px;
         border: solid 1px black;
         border-radius: 30px;
         background-color: indigo;
     }
-
+    
     #button_text{
         font-size: 20px;
         color: white;
-
+    
     }
-    #bilder{
+    
+    .bilder{
         display: flex;
         justify-content: center;
         border: white;
-        width: 90px;
+        width: 100px;
     }
     
     #bilder_pa_arragemang {
@@ -984,14 +1227,12 @@ nav {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        background: rgb(124, 80, 158);
         padding: 10px;
-        height: auto;
-        width: 300px;
+        height: 300px;
+        width: 350px;
         border: 1px solid black;
         border-radius: 20px;
-    }
-    #friidrott_rubrik{
-        font-size: 24px;
     }
     
     #varldmasterskapen {
@@ -1013,7 +1254,7 @@ nav {
     }
     
     .varldmasterskapen_rubrik {
-        font-size: 25px;
+        font-size: 40px;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         color: white;
     }
@@ -1022,8 +1263,8 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100px;
-        width: 230px;
+        height: 60px;
+        width: 250px;
         background: rgb(108, 4, 4);
     }
     
@@ -1035,70 +1276,55 @@ nav {
     
     footer{
         display: flex;
-        padding: 20px;
         grid-area: fo;
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
         background: rgb(32, 32, 32);
         border-top: solid 2px grey;
     }
-
-
-    #slideshow_news{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        grid-area: se;
-        background: whitesmoke;
-    }
-
-    #slideshow {
-        height: 200px;
-        width: 350px;
-        background-image: url('img/hurdle.jpg');
-    }
-
+    
     #adress_section {
         display: flex;
-        height: 100px;
+        height: 200px;
         width: 200px;
         justify-content: flex-start;
         flex-direction: column;
     }
     #kontakt_section {
         display: flex;
-        height: 100px;
+        height: 200px;
         width: 200px;
-        justify-content: space-around;
+        justify-content: flex-start;
         flex-direction: column;
+    
     }
     #mf_section {
         display: flex;
-        height: 150px;
-        width: 100px;
-        justify-content: flex-start;
-        flex-direction: column;
-    
-    }
-    #sociala_m_section {
-        display: flex;
-        height: 100px;
+        height: 200px;
         width: 200px;
         justify-content: flex-start;
+        flex-direction: column;
+    }
+    
+    #sociala_m_section {
+        display: flex;
+        height: 200px;
+        width: 200px;
+        justify-content: space-evenly;
         flex-direction: row;
         flex-wrap: wrap;
+    
     }
     
     .footer_rubrik {
-        font-size: 13px; 
+        font-size: 18px; 
         color: grey;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     
     .text_footer {
-        display: flex;
-        font-size: 10px;
+        font-size: 16px;
         color: white;
         font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
@@ -1107,14 +1333,16 @@ nav {
         display: flex;
         width: 200px;
         height: 20px;
+        padding: 10px;
         justify-content: space-evenly;
+        align-items: flex-end;
     }
     
     .fa {
-        font-size: 15px;
-        padding: 3px;
-        height: 20px;
-        width: 20px;
+        font-size: 30px;
+        padding: 12px;
+        height: 40px;
+        width: 40px;
         text-align: center;
         text-decoration: none;
         border-radius: 50%;
@@ -1144,32 +1372,35 @@ nav {
         color: white;
         text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
-
+    
+    
+      
     #container{ 
         display: grid;
         height: 400vh;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 1500px 2000px 700px;
+        grid-template-rows: 80px 1500px 2300px 300px;
         grid-template-areas: 
         "he he"   
         "om om"
         "sa sa"
         "fo fo";
     }
-
+    
     #om_oss_header{ 
         display: flex;
         grid-area: he;
         background: linear-gradient(90deg, #ab058b, indigo);
         justify-content: flex-end;
         align-items: center;
+        padding-right: 30px;
     }
     
     #Om_oss{ 
         display: flex;
         grid-area: om;
         background: whitesmoke;
-        flex-direction: column;
+        flex-direction: row;
         padding: 30px;
         align-items: center;
         justify-content: space-evenly;
@@ -1178,12 +1409,13 @@ nav {
     
     #text_om_oss { 
         display: flex;
-        width: 400px;
-        height: 1500px;
+        width: 500px;
+        height: 1300px;
         flex-direction: column;
         align-items: flex-start;
         border: solid 1px grey;
         background-color: white;
+        border-radius: 10px;
         padding: 30px;
         margin: 20px;
         color: black;
@@ -1198,10 +1430,11 @@ nav {
     #om_oss_rubrik {
         font-size: 26px;
     }
-   
+    
     #google_maps {
         height: 900px;
-        width: 400px;
+        width: 500px;
+        border-radius: 10px;
         border: solid 1px grey;
     }
     
@@ -1231,35 +1464,42 @@ nav {
         flex-direction: column;
         grid-area: sa;
     }
-
+    
     
     #vi_som_jobbar_har {
         display: flex;
-        height: auto;
-        width: 350px;
-        border: solid 2px black;
+        height: 1300px;
+        width: 1000px;
+        border: solid 1px black;
+        border-radius: 10px;
+        padding: 30px;
         justify-content: space-between;
         background-color: white;
         flex-direction: column;
         align-items: center;
     }
     
+    .rubriker {
+        font-size: 30px;
+    }
+    
     #arbetare_rutor {
         display: flex;
         align-items: center;
         justify-content: center;
-        flex-direction: row;
+        flex-direction: column;
         flex-wrap: wrap;
-        width: 350px;
-        height: auto;
+        width: 800px;
+        height: 600px;
     }
     
     #om_jhf {
         display: flex;
         flex-direction: column;
         padding: 10px;
-        height: auto;
-        width: 300px;
+        height: 500px;
+        width: 800px;
+        border-radius: 10px;
         border: solid 1px black;
     }
     #Kontakta_oss { 
@@ -1270,7 +1510,7 @@ nav {
     
     .arbetare {
         display: flex;
-        width: 120px;
+        width: 150px;
         height: 250px;
         border: 3px solid #1f2a1f;
         background-color: white;
@@ -1297,11 +1537,42 @@ nav {
         border-top-left-radius: 27px;
         border-top-right-radius: 27px;
     }
-
+    
+    header {
+        grid-area: he;
+        background-color: #3a3a3a;
+        color: #fff;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+      
+    header h1 {
+        margin: 0;
+    }
+      
+    #links {
+        display: flex;
+        align-items: center;
+    }
+      
+    #links a {
+        color: #fff;
+        text-decoration: none;
+        margin-right: 1rem;
+        font-size: 20px;
+    }
+      
+    #links a:hover {
+        color: #f1f1f1;
+    }
+      
+     
     #event_wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 900px 700px;
+        grid-template-rows: 80px 800px 300px;
         grid-template-areas: 
         "he he"
         "ca ev"
@@ -1416,6 +1687,202 @@ nav {
         font-size: 25px;
         align-items: center;
         color: orange;
+    }
+    
+    #galleri_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 1000px 300px;
+        grid-template-areas: 
+        "he he"
+        "ma ma" 
+        "fo fo";
+    }
+    
+    main {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 20px;
+        grid-area: ma;
+    }
+      
+    #galleri {
+        text-align: center;
+        font-size: 36px;
+    }
+      
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+      
+    .gallery img {
+        width: calc(33.33% - 10px);
+        margin-bottom: 20px;
+    }
+      
+    #load-more {
+        display: block;
+        margin: 0 auto;
+        padding: 10px 20px;
+        background-color: #555;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+      
+    #load-more:hover {
+        background-color: #333;
+    }
+    
+    
+    #main_wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 600px 900px 300px;
+        grid-template-areas:
+        "he he"
+        "tf tf"
+        "ts ts"
+        "fo fo";
+    }
+    
+    #trana_friidrott {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        background: whitesmoke;
+        padding: 20px;
+        grid-area: tf;
+    }
+    
+    #bilder_friidrott {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: row;
+        width: 500px;
+    }
+    .bilden_till_friidrott {
+        border-radius: 20px;
+        width: 200px;
+        height: auto;
+    }
+    
+    #trana_friidrott_text {
+        width: 500px;
+    }
+    
+    #rubrik_trana_friidrott {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: white;
+        height: 100px;
+        width: 400px;
+        background-color: indigo;
+        border-radius: 20px;
+    }
+    
+    #lank_friidrottskola {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        height: 90px;
+        width: 600px;
+        background-color: indigo;
+        border-radius: 20px;
+    
+    }
+    
+    #lank_till_friidrottskola {
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+    }
+    
+    
+    #tekniklager_friidrottskola {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background: whitesmoke;
+        flex-direction: row;
+        grid-area: ts;
+    }
+    
+    #friidrottsskola_ruta {
+        display: flex;
+        height: auto;
+        background-color: indigo;
+        width: 500px;
+        height: 800px;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        border: solid 1px black;
+        border-radius: 20px;
+      
+    }
+    
+    .ruta_rubrik {
+        display: flex;
+        align-items: center;
+        background-color: rgb(124, 80, 158);
+        justify-content: center;
+        font-size: 24px;
+        border: 1px solid black;
+        border-radius: 20px;
+        border-radius: 20px;
+        margin: 20px;
+        padding: 20px;
+        width: 300px;
+    }
+    
+    .ruta_for_text {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        height: auto;
+        width: 400px;
+        background: rgb(124, 80, 158);
+        border: solid 1px black;
+        border-radius: 20px;
+    }
+    
+    #teknik_ruta {
+        display: flex;
+        height: auto;
+        background-color: indigo;
+        width: 500px;
+        height: 800px;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        border: solid 1px black;
+        border-radius: 20px;
+    }
+
+    #nav-links {
+        flex-direction: row;
+        height: 80px;
+        width: 100%;
+        background-color: lightcyan;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+    }
+
+    .nav_active {
+        transform: translateY(0px);
     }
 
     

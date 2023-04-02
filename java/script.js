@@ -15,9 +15,9 @@ const button = document.querySelector('#load-more');
 
 const loadMoreImages = () => {
   const newImages = document.createDocumentFragment();
-  for (let i = 1; i <= 6; i++) {
+  for (let i = 1; i <= 3; i++) {
     const img = document.createElement('img');
-    img.src = `image${i}.jpg`;
+    img.src = `img/image${i}.jpg`;
     newImages.appendChild(img);
   }
   gallery.appendChild(newImages);

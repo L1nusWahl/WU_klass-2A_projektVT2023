@@ -17,13 +17,35 @@
             <h1>JHF</h1>
             <section id="links">
                 <a href="index.html">Start</a>
+                <a href="#">Friidrottsskola</a>
                 <a href="#">Arragemang</a>
-                <a href="Events.html">Tävling</a>
+                <a href="tavlingar.html">Tävling</a>
                 <a href="om_oss.html">Om JHF Friidrott</a>
                 <a href="#">Galleri</a>
+                <a href="trana_friidrott.html">Träna friidrott</a>
+                <a href="#">Sponsra JHF</a>
             </section> 
            
         </header>
+
+        <nav>
+            <ul id="nav-links" class="nav_active">
+                <li><a href="index.html">Start</a></li>
+                <li><a href="#">Friidrottsskola</a></li>
+                <li><a href="#">Arragemang</a></li>
+                <li><a href="tavlingar.html">Tävling</a></li>
+                <li><a href="om_oss.html">Om JHF Friidrott</a></li>
+                <li><a href="#">Galleri</a></li>
+                <li><a href="trana_friidrott.html">Träna friidrott</a></li>
+                <li><a href="#">Sponsra</a></li>
+            </ul>
+
+            <div id="burger" class="burger_toggle">
+                <div id="burger_line_1"></div>
+                <div id="burger_line_2"></div>
+                <div id="burger_line_3"></div>
+            </div>
+        </nav>
 
 
 
@@ -32,61 +54,55 @@
             <img id="slideshow" alt="Slideshow">
 
             <section id="information_rutor">
+
+                <article class="information_ruta">
+                    <div class="bild_ruta_ring">
+                        <article class="bild_ruta"><img src="img/100m.jpg" alt="100m_bild" id="information_bild"></article>
+                    </div>
+                    <article class="text_ruta">
+                        <div class="information_text">
+                            <p class="datum">16 MARS, 2023</p>
+                            <h1>Guld i 100m för Philip Gustavsson</h1>
+                        </div>
+                    </article>
+                </article>
+
+                <article class="information_ruta">
+                    <div class="bild_ruta_ring">
+                        <article class="bild_ruta"><img src="img/hurdle.jpg" alt="hurdle_bild" id="information_bild"></article>
+                    </div>
+                    <article class="text_ruta">
+                        <div class="information_text">
+                            <p class="datum">20 AUGUSTI, 2023</p>
+                            <h1>Lag SM flyttad till 8 Juni</h1>
+                        </div>
+                    </article>
+                </article>
+
+                <article class="information_ruta">
+                    <div class="bild_ruta_ring">
+                        <article class="bild_ruta"><img src="img/friidrott1.jpg" alt="relay_bild" id="information_bild"></article>
+                    </div>
+                    <article class="text_ruta">
+                        <div class="information_text">
+                            <p class="datum">23 APRIL, 2023</p>
+                            <h1>Andra palts för Andrea Marinkovic</h1>
+                        </div>
+                    </article>
+                </article>
+            
                 <article class="information_ruta">
                     <div class="bild_ruta_ring">
                         <article class="bild_ruta"><img src="img/relay.jpg" alt="relay_bild" id="information_bild"></article>
                     </div>
                     <article class="text_ruta">
                         <div class="information_text">
-                            <p class="datum">16 MARS, 2023</p>
+                            <p class="datum">16 JUNI, 2023</p>
                             <h1>Lag SM flyttad till 8 Juni</h1>
                         </div>
                     </article>
                 </article>
-                <article class="information_ruta">
-                    <div class="bild_ruta_ring">
-                        <article class="bild_ruta"><img src="img/relay.jpg" alt="relay_bild" id="information_bild"></article>
-                    </div>
-                    <article class="text_ruta">
-                        <div class="information_text">
-                            <p class="datum">16 MARS, 2023</p>
-                            <h1>Lag SM flyttad till 8 Juni</h1>
-                        </div>
-                    </article>
-                </article>
-                <article class="information_ruta">
-                    <div class="bild_ruta_ring">
-                        <article class="bild_ruta"><img src="img/relay.jpg" alt="relay_bild" id="information_bild"></article>
-                    </div>
-                    <article class="text_ruta">
-                        <div class="information_text">
-                            <p class="datum">16 MARS, 2023</p>
-                            <h1>Lag SM flyttad till 8 Juni</h1>
-                        </div>
-                    </article>
-                </article>
-                <article class="information_ruta">
-                    <div class="bild_ruta_ring">
-                        <article class="bild_ruta"><img src="img/relay.jpg" alt="relay_bild" id="information_bild"></article>
-                    </div>
-                    <article class="text_ruta">
-                        <div class="information_text">
-                            <p class="datum">16 MARS, 2023</p>
-                            <h1>Lag SM flyttad till 8 Juni</h1>
-                        </div>
-                    </article>
-                </article>
-                <article class="information_ruta">
-                    <div class="bild_ruta_ring">
-                        <article class="bild_ruta"><img src="img/relay.jpg" alt="relay_bild" id="information_bild"></article>
-                    </div>
-                    <article class="text_ruta">
-                        <div class="information_text">
-                            <p class="datum">16 MARS, 2023</p>
-                            <h1>Lag SM flyttad till 8 Juni</h1>
-                        </div>
-                    </article>
-                </article>
+                
                 <article id="news_link_box">
                     <a id="links_news" href="#">Se alla nyheter</a>
                 </article>
@@ -99,7 +115,9 @@
             <article id="friidrott_ruta">
                 <h1 id="friidrott_rubrik">Börja träna friidrott</h1>
                 <section id="bilder_pa_friidrott">
-                    <img src="" alt=""><img src="" alt=""><img src="" alt="">
+                    <section class="bilder">
+                        <img src="img/markus-spiske-rvWW8uZZYxc-unsplash.jpg" class="bilder_pa_friidrott" alt="running"> <img src="img/sporlab-XiZ7pRvCzro-unsplash.jpg" class="bilder_pa_friidrott" alt="running"><img src="img/braden-collum-9HI8UJMSdZA-unsplash.jpg" class="bilder_pa_friidrott" alt="">
+                    </section>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit neque ut nihil dicta vel pariatur debitis ratione, corporis sunt inventore.</p>
                     <button><p id="button_text">Läs mer</p></button>
                 </section>
@@ -109,8 +127,8 @@
             <article id="arragemang_ruta">
                 <h1 id="arragemang_rubrik">Arragemang</h1>
                 <section id="bilder_pa_arragemang">
-                    <section id="bilder">
-                        <img src="img/leah-hetteberg--9ejBU_FAew-unsplash.jpg" alt="running" class="bilder_pa_arragemang"><img src="img/leah-hetteberg-X-Tmdvp7Ni4-unsplash.jpg" alt="running" class="bilder_pa_arragemang"><img src="img/chris-aR-o_3b760U-unsplash.jpg" alt="running" class="bilder_pa_arragemang">
+                    <section class="bilder">
+                        <img src="img/leah-hetteberg--9ejBU_FAew-unsplash.jpg" alt="running" class="bilder_pa_arragemang"><img src="img/springa.jpg" alt="running" class="bilder_pa_arragemang"><img src="img/chris-aR-o_3b760U-unsplash.jpg" alt="running" class="bilder_pa_arragemang">
                     </section>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit neque ut nihil dicta vel pariatur debitis ratione, corporis sunt inventore.</p>
                     <button><p id="button_text">Läs mer</p></button>
@@ -129,9 +147,6 @@
             </section>
         </section>
 
-        <section id="sponsorer">
-        
-        </section>
 
         <footer>
             <section id="adress_section">
