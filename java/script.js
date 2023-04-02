@@ -10,20 +10,5 @@ function nextImage() {
 setInterval(nextImage, 5000); 
 
 
-const gallery = document.querySelector('.gallery');
-const button = document.querySelector('#load-more');
-
-const loadMoreImages = () => {
-  const newImages = document.createDocumentFragment();
-  for (let i = 1; i <= 3; i++) {
-    const img = document.createElement('img');
-    img.src = `img/image${i}.jpg`;
-    newImages.appendChild(img);
-  }
-  gallery.appendChild(newImages);
-}
-
-button.addEventListener('click', loadMoreImages);
-
 
 
