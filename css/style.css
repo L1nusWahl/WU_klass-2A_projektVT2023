@@ -840,6 +840,14 @@ nav {
     "fo fo";
 }
 
+.avgift_rubrik {
+    color: white;
+}
+
+.tekniklager_friidrottskola_text {
+    color: white;
+}
+
 #trana_friidrott {
     display: flex;
     justify-content: space-evenly;
@@ -924,6 +932,7 @@ nav {
     background-color: rgb(124, 80, 158);
     justify-content: center;
     font-size: 24px;
+    color: white;
     border: 1px solid black;
     border-radius: 20px;
     border-radius: 20px;
