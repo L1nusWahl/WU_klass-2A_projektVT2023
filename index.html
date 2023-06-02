@@ -4,9 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="description" content="Start sida som innehåller lite av allt">
     <title>JHF</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 </head>
 
 
@@ -14,8 +18,8 @@
     <div id="grid_wrapper">
         
         <header>
-            <h1>JHF</h1>
-            <div id="links">
+            <a id="webbsite_logo" href="#">JHF</a>
+            <section id="links">
                 <a href="index.html">Start</a>
                 <a href="#">Friidrottsskola</a>
                 <a href="#">Arrangemang</a>
@@ -24,12 +28,12 @@
                 <a href="#">Galleri</a>
                 <a href="trana_friidrott.html">Träna friidrott</a>
                 <a href="#">Sponsra JHF</a>
-            </div> 
+            </section> 
            
         </header>
 
         <nav>
-            <ul id="nav-links" class="nav_active">
+            <ul id="nav-links">
                 <li><a href="index.html">Start</a></li>
                 <li><a href="#">Friidrottsskola</a></li>
                 <li><a href="#">Arrangemang</a></li>
@@ -40,7 +44,7 @@
                 <li><a href="#">Sponsra</a></li>
             </ul>
 
-            <div id="burger" class="burger_toggle">
+            <div id="burger">
                 <div id="burger_line_1"></div>
                 <div id="burger_line_2"></div>
                 <div id="burger_line_3"></div>
@@ -49,66 +53,79 @@
 
 
 
-        <section id="slideshow_news" >
+        <section id="slideshow_news">
             
-            <img id="slideshow" alt="Slideshow">
+            <section id="slideshow_area">
+                <img src="img/friidrott1.jpg" id="slideshow" alt="Slideshow">
+            </section>
+          
 
             <section id="information_rutor">
 
                 <article class="information_ruta">
-                    <div class="bild_ruta_ring">
-                        <article class="bild_ruta"><img src="img/100m.jpg" alt="100m_bild" class="information_bild"></article>
-                    </div>
+                    <section class="bild_ruta_ring">
+                        <img src="img/100m.jpg" alt="100m_bild" class="information_bild">
+                    </section>
                     <article class="text_ruta">
-                        <div class="information_text">
+                        <section class="information_text">
                             <p class="datum">16 MARS, 2023</p>
-                            <h4>Guld i 100m för Philip</h4>
-                        </div>
+                            <a class="links_news" href="#">Guld i 100m för Philip</a>
+                        </section>
                     </article>
                 </article>
 
                 <article class="information_ruta">
-                    <div class="bild_ruta_ring">
-                        <article class="bild_ruta"><img src="img/hurdle.jpg" alt="hurdle_bild" class="information_bild"></article>
-                    </div>
+                    <section class="bild_ruta_ring">
+                        <img src="img/hurdle.jpg" alt="hurdle_bild" class="information_bild">
+                    </section>
                     <article class="text_ruta">
-                        <div class="information_text">
+                        <section class="information_text">
                             <p class="datum">20 AUGUSTI, 2023</p>
-                            <h4>Lag SM flyttad till 8 Juni</h4>
-                        </div>
+                            <a class="links_news" href="#">Lag SM flyttad till 8 Juni</a>
+                        </section>
                     </article>
                 </article>
 
                 <article class="information_ruta">
-                    <div class="bild_ruta_ring">
-                        <article class="bild_ruta"><img src="img/friidrott1.jpg" alt="relay_bild" class="information_bild"></article>
-                    </div>
+                    <section class="bild_ruta_ring">
+                       <img src="img/friidrott1.jpg" alt="relay_bild" class="information_bild">
+                    </section>
                     <article class="text_ruta">
-                        <div class="information_text">
+                        <section class="information_text">
                             <p class="datum">23 APRIL, 2023</p>
-                            <h4>Andra palts för Andrea</h4>
-                        </div>
+                            <a class="links_news" href="#">Andra palts för Andrea</a>
+                        </section>
                     </article>
                 </article>
             
                 <article class="information_ruta">
-                    <div class="bild_ruta_ring">
-                        <article class="bild_ruta"><img src="img/relay.jpg" alt="relay_bild" class="information_bild"></article>
-                    </div>
+                    <section class="bild_ruta_ring">
+                        <img src="img/relay.jpg" alt="relay_bild" class="information_bild">
+                    </section>
                     <article class="text_ruta">
-                        <div class="information_text">
+                        <section class="information_text">
                             <p class="datum">16 JUNI, 2023</p>
-                            <h4>Lag SM flyttad till 8 Juni</h4>
-                        </div>
+                            <a class="links_news" href="#">Lag SM flyttad till 8 Juni</a>
+                        </section>
                     </article>
                 </article>
                 
                 <article id="news_link_box">
-                    <a id="links_news" href="#">Se alla nyheter</a>
+                    <a class="links_news" href="#">Se alla nyheter</a>
                 </article>
 
             </section>
             
+        </section>
+
+        <section id="varldmasterskapen">
+            <section id="varldmasterskapen_text">
+                <h1 class="varldmasterskapen_rubrik">VÄRLDSUNGDOMSSPELEN</h1>
+                <h2 class="varldmasterskapen_rubrik">24/6-26/6 2023</h2>
+            </section>
+            <section id="lank_ruta">
+                <a id="lank_varldsungdomspelen" href="//www.vuspel.se">Läs mer på www.vuspel.se</a>
+            </section>
         </section>
 
         <section id="arrangemang">
@@ -118,7 +135,7 @@
                     <section class="bilder">
                         <img src="img/markus-spiske-rvWW8uZZYxc-unsplash.jpg" class="bilder_pa_friidrott" alt="running"><img src="img/sporlab-XiZ7pRvCzro-unsplash.jpg" class="bilder_pa_friidrott" alt="running"><img src="img/braden-collum-9HI8UJMSdZA-unsplash.jpg" class="bilder_pa_friidrott" alt="">
                     </section>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit neque ut nihil dicta vel pariatur debitis ratione, corporis sunt inventore.</p>
+                    <p id="arrangemang_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit neque ut nihil dicta vel pariatur debitis ratione, corporis sunt inventore.</p>
                     <button class="button_text">Läs Mer</button>
                 </section>
             
@@ -127,65 +144,59 @@
             <article id="arrangemang_ruta">
                 <h2 id="arrangemang_rubrik">Arrangemang</h2>
                 <section id="bilder_pa_arrangemang">
-                    <section class="bilder">
-                        <img src="img/leah-hetteberg--9ejBU_FAew-unsplash.jpg" alt="running" class="bilder_pa_arrangemang"><img src="img/springa.jpg" alt="running" class="bilder_pa_arrangemang"><img src="img/chris-aR-o_3b760U-unsplash.jpg" alt="running" class="bilder_pa_arrangemang">
+                    <section id="arrangemang_text_bild">
+                        <p id="text_a">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto assumenda deserunt dicta illum, aspernatur quasi? </p>
+                        <section id="bilder_arrangemang"><img src="img/leah-hetteberg--9ejBU_FAew-unsplash.jpg" alt="running" class="bilder_pa_arrangemang"><img src="img/springa.jpg" alt="running" class="bilder_pa_arrangemang"></section>
                     </section>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit neque ut nihil dicta vel pariatur debitis ratione, corporis sunt inventore.</p>
                     <button class="button_text">Läs Mer</button>
                 </section>
+        
+                
+               
             </article>
        
         </section>
 
-        <section id="varldmasterskapen">
-            <section id="varldmasterskapen_text">
-                <h2 class="varldmasterskapen_rubrik">VÄRLDSUNGDOMSSPELEN</h2>
-                <h2 class="varldmasterskapen_rubrik">24/6-26/6 2023</h2>
-            </section>
-            <section id="lank_ruta">
-                <a id="lank_varldsungdomspelen" href="//www.vuspel.se">Läs mer på www.vuspel.se</a>
-            </section>
-        </section>
 
 
         <footer>
             <section id="adress_section">
                 <h2 class="footer_rubrik">ADRESS</h2>
-                <div>
+                <section>
                     <p class="text_footer"> Friidrottens Väg 7</p>
                     <p class="text_footer">414 76 Göteborg</p>
                     <p class="text_footer"></p>
-                </div>
+                </section>
                 
             </section>
             <section id="kontakt_section">
                 <h2 class="footer_rubrik">KONTAKT</h2>
-                <div>
+                <section>
                     <p class="text_footer">Telefon: 073-075 61 34</p>
                     <p class="text_footer">E-post: friidrott@jhf.se</p>
-                </div>
+                </section>
                 
     
             </section>
             <section id="mf_section">
-                <h2 class="footer_rubrik">MEDLEMSFÖRENINGAR</h2>
-                <div>
+                <h2 class="footer_rubrik">FÖRENINGAR</h2>
+                <section>
                     <p class="text_footer">JHF Friidrott</p>
                     <p class="text_footer">JHF Brottning</p>
                     <p class="text_footer">JHF Fotboll</p>
                     <p class="text_footer">JHF Handboll</p>
-                </div>
+                </section>
                 
             </section>
             <section id="sociala_m_section">
                 <h2 class="footer_rubrik">SOCIALA MEDIER</h2>
                 <section id="logo">
-                    <div>  
+                    <section>  
                         <a href="#" class="fa fa-facebook"></a>
                         <a href="#" class="fa fa-twitter"></a>
                         <a href="#" class="fa fa-instagram"></a>
                         <a href="#" class="fa fa-snapchat-ghost"></a>
-                    </div>
+                    </section>
                   
                 </section>
             </section>
@@ -197,7 +208,6 @@
 
     <script src="java/script.js"></script>
     <script src="java/hamburger.js"></script>
-    
     
 </body>
 </html>

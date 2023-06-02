@@ -1,4 +1,10 @@
 
+@font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Regular.ttf') format('truetype');
+}
+
+
 *{
     margin: 0px;
     padding: 0px;
@@ -10,7 +16,7 @@
 #grid_wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 800px 200px 1000px 500px;
+    grid-template-rows: 80px 800px 200px 1000px 700px;
     grid-template-areas:
     "he na"
     "se se"
@@ -19,15 +25,25 @@
     "fo fo";
 }
 
-#links a{
-    font-size: 9px;
+
+#webbsite_logo {
+    font-size: 34pt;
+    font-family: 'Lato';
+    text-decoration: none;
+    color: white;
+}
+
+
+#links a {
+    font-size: 8pt;
+    font-family: 'Lato';
 }
 
 #burger div {
     display: flex;
     height: 5px;
     width: 30px;
-    background-color: black;
+    background-color: white;
     margin: 5px;
     border-radius: 10px;
     transition: all 0.5s;
@@ -50,12 +66,13 @@
 #nav-links li{
     list-style: none;
 }
+
 #nav-links a{
    text-decoration: none;
-   font-size: 1.25rem;
+   font-family: 'Lato';
+   font-size: 34pt;
    letter-spacing: 0.1875rem;
-   color: black;
-   font-family: 'Courier New', Courier, monospace;
+   color: white;
    font-weight: bold;
 }
 
@@ -90,74 +107,64 @@ header{
     padding: 1rem;
 }
 
-#background_img {
-    width: 100%;
-    height: 100%; 
-}
-
-#slideshow_news{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    grid-area: se;
-    background: whitesmoke;
-}
-
 .information_bild{
-    width: 80px;
-    height: 60px;
-    border: solid 1px grey;
+    object-fit: contain;
+    width: 90px;
+    height: auto;
+    border-radius: 10px;
+    border: solid 1px black;
 }
 
 #information_rutor {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     width: 200px;
     flex-direction: column;
 }
 
 .bild_ruta_ring  {
     display: flex;
-    height: 80px;
+    height: 65px;
     width: 100px;
     justify-content: center;
+    padding-top: 3px;
     align-items: center;
-    border: solid 1px grey;
 }
 
 .information_ruta {
     display: flex;
     width: 320px;
-    height: 105px;
+    height: 80px;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
     background: whitesmoke;
 }
 
 .information_ruta:hover {
     border: solid 1px black;
+    border-radius: 10px;
     background: white;
 }
 .text_ruta {
     display: flex;
-    height: 80px;
+    height: 65px;
     width: 200px;
     justify-content: center;
-    border-bottom: solid 1px grey;
+    border-bottom: solid 1px black;
 }
 .information_text {
     display: flex;
-    padding: 5px;
     flex-direction: column;
     justify-content: space-between;
-    height: 70px;
+    height: 65px;
     width: 200px;
 }
 .datum {
-    font-size: 13px;
+    font-size: 10pt;
     text-decoration: none;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lato';
 }
 h1 {
     display: flex;
@@ -168,16 +175,10 @@ h1 {
     display: flex;
     height: 100%;
     width: 300px;
-    font-size: 10px;
+    font-size: 10pt;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-}
-
-#slideshow {
-    background:whitesmoke;
-    grid-area: sh;
-    border: solid 2px grey;
 }
 
 #news_link_box {
@@ -187,11 +188,13 @@ h1 {
     width: 300px;
 }
 
-#links_news { 
+.links_news { 
     text-decoration: none;
+    font-family: 'Lato';
     color: black;
-    font-size: 16px;
+    font-size: 12pt;
 }
+
 #arrangemang {
     display: flex;
     grid-area: va;
@@ -199,6 +202,20 @@ h1 {
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column-reverse;
+}
+#text_a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 210px;
+    font-family: 'Lato';
+    color: white;
+}
+
+#arrangemang_text {
+    font-family: 'Lato';
+    color: white;
 }
 
 #friidrott_ruta {
@@ -219,7 +236,7 @@ h1 {
     align-items: center;
     background-color: rgb(124, 80, 158);
     justify-content: center;
-    font-size: 24px;
+    font-size: 21pt;
     color: white;
     border: 1px solid black;
     border-radius: 20px;
@@ -259,11 +276,12 @@ h1 {
     border-radius: 10px;
     margin: 5px;
 }
+
 #arrangemang_ruta {
     display: flex;
     height: auto;
     background-color: indigo;
-    width: 350px;
+    width: 370px;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
@@ -277,31 +295,50 @@ h1 {
     align-items: center;
     background-color: rgb(124, 80, 158);
     justify-content: center;
-    font-size: 24px;
+    font-size: 21pt;
     color: white;
     border: 1px solid black;
     border-radius: 20px;
     border-radius: 20px;
     margin: 20px;
     height: auto;
-    width: 200px;
+    width: 220px;
 }
 
 button{
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 40%;
-    font-size: 10px;
+    height: 40px;
+    width: 110px;
+    font-size: 10pt;
     border: solid 1px black;
     border-radius: 30px;
     background-color: indigo;
 }
 
 .button_text{
-    font-size: 20px;
+    font-size: 21pt;
     color: white;
+    font-family: 'Lato';
+}
+
+#arrangemang_text_bild {
+    display: flex;
+    justify-content: space-evenly;
+    height: 200px;
+    width: 300px;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+#bilder_arrangemang {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: white;
+    width: 90px;
 }
 
 .bilder{
@@ -319,13 +356,11 @@ button{
     background-color: rgb(124, 80, 158);
     padding: 10px;
     height: auto;
-    width: 300px;
+    width: 330px;
     border: 1px solid black;
     border-radius: 20px;
 }
-#friidrott_rubrik{
-    font-size: 24px;
-}
+
 
 #varldmasterskapen {
     display: flex;
@@ -346,8 +381,8 @@ button{
 }
 
 .varldmasterskapen_rubrik {
-    font-size: 25px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 21pt;
+    font-family: 'Playfair Display', serif;
     color: white;
 }
 
@@ -361,9 +396,9 @@ button{
 }
 
 #lank_varldsungdomspelen{
-    font-size: 20px;
+    font-size: 15pt;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
 footer{
@@ -386,29 +421,39 @@ footer{
     background: whitesmoke;
 }
 
+#slideshow_area{
+    display: flex;
+    height: 300px;
+    width: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
 #slideshow {
-    height: 200px;
-    width: 350px;
-    background-image: url('img/hurdle.jpg');
+    height: auto;
+    width: 400px;
+    object-fit: contain;
+    border-radius: 10px;
+    border: solid grey 2px;
 }
 
 #adress_section {
     display: flex;
-    height: 100px;
+    height: 130px;
     width: 200px;
     justify-content: flex-start;
     flex-direction: column;
 }
 #kontakt_section {
     display: flex;
-    height: 100px;
+    height: 200px;
     width: 200px;
     justify-content: space-around;
     flex-direction: column;
 }
 #mf_section {
     display: flex;
-    height: 150px;
+    height: 300px;
     width: 100px;
     justify-content: flex-start;
     flex-direction: column;
@@ -416,38 +461,38 @@ footer{
 }
 #sociala_m_section {
     display: flex;
-    height: 100px;
-    width: 200px;
+    height: 200px;
+    width:300px;
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
 .footer_rubrik {
-    font-size: 13px; 
-    color: grey;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18pt; 
+    color: white;
+    font-family:'Playfair Display', serif;
 }
 
 .text_footer {
     display: flex;
-    font-size: 10px;
+    font-size: 13pt;
     color: white;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Lato';
 }
 
 #logo {
     display: flex;
-    width: 200px;
+    width: 300px;
     padding: 40px;
     justify-content: space-evenly;
 }
 
 .fa {
     font-size: 15px;
-    padding: 3px;
-    height: 20px;
-    width: 20px;
+    padding: 7px;
+    height: 30px;
+    width: 30px;
     text-align: center;
     text-decoration: none;
     border-radius: 50%;
@@ -482,13 +527,20 @@ footer{
     display: grid;
     height: 300vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 1500px 2300px 500px;
+    grid-template-rows: 80px 1500px 2300px 700px;
     grid-template-areas: 
     "he na"   
     "om om"
     "sa sa"
     "fo fo";
 }
+
+
+h2 {
+    font-size: 21pt;
+    font-family: 'Playfair Display', serif; 
+}
+
 
 #om_oss_header{ 
     display: flex;
@@ -509,18 +561,14 @@ footer{
     
 }
 
-.rubriker {
-    font-size: 30px;
-}
-
 #text_om_oss { 
     display: flex;
     width: 400px;
-    height: 1500px;
+    height: 1700px;
     flex-direction: column;
     align-items: flex-start;
     border-radius: 10px;
-    border: solid 1px grey;
+    border: solid 1px black;
     background-color: white;
     padding: 30px;
     margin: 20px;
@@ -528,13 +576,25 @@ footer{
 }
 
 #person_bild {
-    width: 100%;
-    height: auto;
+    width: 333px;
+    height: 500px;
+    border-radius: 10px;
     border: solid 1px grey;
 }
 
 #om_oss_rubrik {
-    font-size: 26px;
+    font-size: 34pt;
+    font-family: 'Playfair Display', serif;
+}
+
+.om_oss_underrubrik {
+    font-size: 16pt;
+    font-family: 'Playfair Display', serif;
+}
+
+.yrke{
+    font-size: 14pt;
+    font-family: 'Playfair Display', serif;
 }
 
 #google_maps {
@@ -556,10 +616,15 @@ p{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:'Lato';
     font-size: 1.5rem;
     color: #DEDEDE;
     text-decoration: none;
+}
+
+#rubrik {
+    font-size: 21pt;
+    font-family: 'Playfair Display', serif;
 }
 
 #anstallda_om_oss_text{
@@ -575,7 +640,7 @@ p{
 #vi_som_jobbar_har {
     display: flex;
     height: auto;
-    width: 350px;
+    width: 400px;
     border: solid 2px black;
     border-radius: 10px;
     justify-content: space-between;
@@ -612,7 +677,7 @@ p{
 
 .arbetare {
     display: flex;
-    width: 120px;
+    width: 125px;
     height: 250px;
     border: 3px solid #1f2a1f;
     background-color: white;
@@ -632,25 +697,39 @@ p{
     align-items: center;
 }
     
-#bild_anstalld { 
-    height: auto;
-    width: 100%;
-    border-bottom: 3px solid #1f2a1f;
-    border-top-left-radius: 27px;
-    border-top-right-radius: 27px;
+.bild_anstalld { 
+    object-fit: contain;
+    height: 163px;
+    width: 120px;
+    border-bottom: 3px solid black;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+.namn_arbetare {
+    font-size: 11pt;
+    font-family: 'Lato';
 }
 
 #event_wrapper {
     display: grid;
+    height: 300vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 500px 900px 500px;
+    grid-template-rows: 80px 900px 500px 600px 300px 700px;
     grid-template-areas: 
     "he na"
-    "ca ca"
     "ev ev"
+    "ca ca"
+    "fu fu"
+    "mf mf"
     "fo fo";
 }
   
+#tavlingar_rubrik {
+    font-size: 34pt;
+    font-family: 'Playfair Display', serif; 
+}
+
 #calendar {
     background-color: #ddd;
     display: flex;
@@ -661,7 +740,7 @@ p{
     grid-area: ca;
 }
   
-#calendar h1 {
+#calendar h2 {
     margin: 0;
     margin-bottom: 1rem;
 }
@@ -670,6 +749,7 @@ p{
     display: grid;
     grid-gap: 0.5rem;
 }
+
 
 .day {
     display: flex;
@@ -701,7 +781,7 @@ p{
     padding: 2rem;
 }
   
-#events h1 {
+#events h2 {
     margin: 0;
     margin-bottom: 2rem;
     text-align: center;
@@ -726,13 +806,11 @@ p{
 #events_list li h2 {
     margin: 0;
     margin-bottom: 0.5rem;
-    font-size: 1.2rem;
 }
   
 #events_list li p {
     margin: 0;
     margin-bottom: 0.5rem;
-    font-size: 1rem;
 }
   
 table{
@@ -748,7 +826,8 @@ td:hover {
 
 th,td {
     font-weight: bold;
-    font-size: 18px;
+    font-family: 'Lato';
+    font-size: 13pt;
 }
 
 tr{
@@ -756,9 +835,86 @@ tr{
 }
 
 #rubrik_kalender {
-    font-size: 25px;
+    font-size: 21pt;
     align-items: center;
-    color: orange;
+    color: black;
+}
+
+#funktionar {
+    grid-area: fu;
+    background-color: #f1f1f1;
+    padding: 2rem;
+}
+
+#funktionar h2 {
+    margin: 0;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#funktionar form {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+#funktionar label {
+    font-weight: bold;
+}
+
+#funktionar input,
+#funktionar textarea {
+    width: 100%;
+    padding: 0.5rem;
+}
+
+#funktionar button {
+    background-color: #3a3a3a;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+#funktionar button:hover {
+    background-color: #000;
+}
+
+#mer_info {
+    grid-area: mf;
+    background-color: #f1f1f1;
+    padding: 2rem;
+}
+
+#mer_info h2 {
+    margin: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#mer_info p {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+#mer_info ul {
+    list-style: none;
+    padding: 0;
+}
+
+#mer_info ul li {
+    margin-bottom: 0.5rem;
+}
+
+#mer_info ul li a {
+    color: #3a3a3a;
+    text-decoration: none;
+}
+
+#mer_info ul li a:hover {
+    text-decoration: underline;
 }
 
 nav {
@@ -770,15 +926,6 @@ nav {
 }
 
 
-#burger div {
-    display: flex;
-    height: 5px;
-    width: 30px;
-    background-color: black;
-    margin: 5px;
-    border-radius: 10px;
-    transition: all 0.5s;
-}
 
 #nav-links {
     display: flex;
@@ -802,13 +949,7 @@ nav {
 #nav-links li{
     list-style: none;
 }
-#nav-links a{
-   text-decoration: none;
-   font-size: 30px;
-   color: white;
-   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-   font-weight: bold;
-}
+
 
 #burger {
     margin-right: 40px;
@@ -835,7 +976,7 @@ nav {
 #main_wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 600px 1800px 500px;
+    grid-template-rows: 80px 600px 2000px 700px;
     grid-template-areas:
     "he na"
     "tf tf"
@@ -845,6 +986,8 @@ nav {
 
 .avgift_rubrik {
     color: white;
+    font-size: 18pt;
+    font-family: 'Playfair Display';
 }
 
 .tekniklager_friidrottskola_text {
@@ -883,7 +1026,9 @@ nav {
     justify-content: center;
     color: white;
     padding: 20px;
-    width: 200px;
+    width: 350px;
+    font-size: 26pt;
+    font-family: 'Playfair Display', serif;
     background-color: indigo;
     border-radius: 20px;
 }
@@ -894,7 +1039,7 @@ nav {
     justify-content: center;
     flex-direction: column;
     padding: 20px;
-    width: 350px;
+    width: 280px;
     background-color: indigo;
     border-radius: 20px;
 
@@ -903,7 +1048,7 @@ nav {
 #lank_till_friidrottskola {
     text-decoration: none;
     color: white;
-    font-size: 17px;
+    font-size: 17pt;
 }
 
 
@@ -929,12 +1074,18 @@ nav {
     padding: 10px;
 }
 
+p {
+    font-family: 'Lato';
+    font-size: 13pt;
+}
+
 .ruta_rubrik {
     display: flex;
     align-items: center;
     background-color: rgb(124, 80, 158);
     justify-content: center;
-    font-size: 24px;
+    font-size: 21pt;
+    font-family: 'Playfair Display', serif;
     color: white;
     border: 1px solid black;
     border-radius: 20px;
@@ -984,9 +1135,17 @@ nav {
         "va va"
         "fo fo";
     }
+
+    #webbsite_logo {
+        font-size: 34pt;
+        font-family: 'Lato';
+        text-decoration: none;
+        color: white;
+    }
     
     h2 {
-        font-size: 25px;
+        font-size: 34pt;
+        font-family: 'Playfair Display', serif; 
     }
     
     nav {
@@ -1008,14 +1167,20 @@ nav {
     nav {
         display: none;
     }
-    #background_img {
-        width: 100%;
-        height: auto; 
+    
+    #slideshow_area{
+        display: flex;
+        height: 400px;
+        width: 650px;
+        justify-content: center;
+        align-items: center;
     }
     
     #slideshow {
-        height: 400px;
+        height: auto;
         width: 650px;
+        object-fit: contain;
+        border: solid grey 2px;
     }
     
     #slideshow_news{
@@ -1035,17 +1200,12 @@ nav {
     #information_rutor {
         display: flex;
         align-items: center;
-        justify-content: center;
-        height: 500px;
+        justify-content: space-evenly;
+        height: 400px;
         width: 500px;
         flex-direction: column;  
     }
-    
-    .bild_ruta {
-        height: 60px;
-        width: 95px;
-        border: solid 1px grey;
-    }
+
     
     .bild_ruta_ring  {
         display: flex;
@@ -1053,7 +1213,6 @@ nav {
         width: 105px;
         justify-content: center;
         align-items: center;
-        border: solid 1px grey;
     }
     
     .information_ruta {
@@ -1067,6 +1226,7 @@ nav {
     
     .information_ruta:hover {
         border: solid 1px black;
+        border-radius: 10px;
         background: white;
     }
     .text_ruta {
@@ -1078,26 +1238,23 @@ nav {
     }
     .information_text {
         display: flex;
-        padding: 5px;
         flex-direction: column;
         justify-content: space-between;
         height: 10px;
         width: 400px;
     }
     .datum {
-        font-size: 13px;
+        font-size: 10pt;
         text-decoration: none;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family:'Lato';
     }
-    h1 {
-        display: flex;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-    
+
+   
+
     #links {
         display: flex;
         height: 100%;
-        width: 900px;
+        width: 1000px;
         flex-direction: row;
         justify-content: space-evenly;
         align-items: center;
@@ -1116,11 +1273,13 @@ nav {
         width: 500px;
     }
     
-    #links_news { 
+    .links_news { 
         text-decoration: none;
-        color: rgb(168, 108, 55);
-        font-size: 16px;
+        font-family: 'Lato';
+        color: black;
+        font-size: 13pt;
     }
+
     #arrangemang {
         display: flex;
         grid-area: va;
@@ -1134,7 +1293,7 @@ nav {
         display: flex;
         height: 500px;
         background-color: indigo;
-        width: 400px;
+        width: 500px;
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
@@ -1148,14 +1307,14 @@ nav {
         align-items: center;
         background-color: rgb(124, 80, 158);
         justify-content: center;
-        font-size: 24px;
         color: white;
+        font-size: 34pt;
         border: 1px solid black;
         border-radius: 20px;
         border-radius: 20px;
         margin: 20px;
-        height: 50px;
-        width: 300px;
+        height: 70px;
+        width: 450px;
     }
     
     #bilder_pa_friidrott {
@@ -1166,11 +1325,21 @@ nav {
         background: rgb(124, 80, 158);
         padding: 10px;
         height: 300px;
-        width: 350px;
+        width: 400px;
         border: 1px solid black;
         border-radius: 20px;
     }
     
+    #arrangemang_text_bild {
+        display: flex;
+        justify-content: space-evenly;
+        height: 200px;
+        width: 400px;
+        flex-direction: row;
+        flex-wrap: wrap;
+    
+    }
+
     .bilder_pa_friidrott {
         height: auto;
         background-color: white;
@@ -1188,17 +1357,24 @@ nav {
         border-radius: 10px;
         margin: 5px;
     }
+
     #arrangemang_ruta {
         display: flex;
         height: 500px;
         background-color: indigo;
-        width: 400px;
+        width: 500px;
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
         border: solid 1px black;
         border-radius: 20px;
         padding: 10px;
+    }
+
+    .arrangemang_text {
+        font-family: 'Lato';
+        color: white;
+        font-size: 13pt;
     }
     
     #arrangemang_rubrik{
@@ -1207,40 +1383,56 @@ nav {
         background-color: rgb(124, 80, 158);
         justify-content: center;
         color: white;
-        font-size: 24px;
+        font-size: 34pt;
         border: 1px solid black;
         border-radius: 20px;
         border-radius: 20px;
         margin: 20px;
-        height: 50px;
-        width: 300px;
+        height: 70px;
+        width: 350px;
     }
     
     button{
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 50px;
-        width: 100px;
-        font-size: 10px;
+        height: 40px;
+        width: 90px;
+        font-size: 10pt;
         border: solid 1px black;
         border-radius: 30px;
         background-color: indigo;
     }
     
-    #button_text{
-        font-size: 20px;
+    .button_text{
+        font-size: 13pt;
         color: white;
-    
     }
     
     .bilder{
         display: flex;
         justify-content: center;
         border: white;
-        width: 100px;
+        width: 120px;
+    }
+
+    #text_a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 150px;
+        width: 210px;
+        font-family: 'Lato';
+        color: white;
     }
     
+    #bilder_arrangemang {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        border: white;
+        width: 90px;
+    }
     #bilder_pa_arrangemang {
         display: flex;
         flex-direction: column;
@@ -1249,7 +1441,7 @@ nav {
         background: rgb(124, 80, 158);
         padding: 10px;
         height: 300px;
-        width: 350px;
+        width: 400px;
         border: 1px solid black;
         border-radius: 20px;
     }
@@ -1273,8 +1465,8 @@ nav {
     }
     
     .varldmasterskapen_rubrik {
-        font-size: 40px;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 55pt;
+        font-family:'Playfair Display', serif;
         color: white;
     }
     
@@ -1288,9 +1480,10 @@ nav {
     }
     
     #lank_varldsungdomspelen{
-        font-size: 20px;
+        font-size: 13pt;
         text-decoration: none;
-        color: black;
+        font-family: 'Lato';
+        color: white;
     }
     
     footer{
@@ -1328,7 +1521,7 @@ nav {
     #sociala_m_section {
         display: flex;
         height: 200px;
-        width: 200px;
+        width: 400px;
         justify-content: space-evenly;
         flex-direction: row;
         flex-wrap: wrap;
@@ -1336,15 +1529,15 @@ nav {
     }
     
     .footer_rubrik {
-        font-size: 18px; 
-        color: grey;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 21pt; 
+        color: white;
+        font-family: 'Playfair Display', serif;
     }
     
     .text_footer {
-        font-size: 16px;
+        font-size: 13pt;
         color: white;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family: 'Lato';
     }
     
     #logo {
@@ -1397,14 +1590,14 @@ nav {
         display: grid;
         height: 400vh;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 1500px 1600px 300px;
+        grid-template-rows: 80px 1800px 1600px 300px;
         grid-template-areas: 
         "he he"   
         "om om"
         "sa sa"
         "fo fo";
     }
-    
+
     #om_oss_header{ 
         display: flex;
         grid-area: he;
@@ -1427,8 +1620,8 @@ nav {
     
     #text_om_oss { 
         display: flex;
-        width: 500px;
-        height: 1300px;
+        width: 600px;
+        height: 1700px;
         flex-direction: column;
         align-items: flex-start;
         border: solid 1px grey;
@@ -1440,18 +1633,20 @@ nav {
     }
     
     #person_bild {
-        width: 100%;
-        height: auto;
+        width: 540px;
+        height: 900px;
+        border-radius: 10px;
         border: solid 1px grey;
     }
     
     #om_oss_rubrik {
-        font-size: 26px;
+        font-size: 55pt;
+        font-family: 'Playfair Display', serif; 
     }
     
     #google_maps {
         height: 900px;
-        width: 500px;
+        width: 400px;
         border-radius: 10px;
         border: solid 1px grey;
     }
@@ -1468,7 +1663,7 @@ nav {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-family:'Lato';
         font-size: 1.5rem;
         color: #DEDEDE;
         text-decoration: none;
@@ -1486,8 +1681,8 @@ nav {
     
     #vi_som_jobbar_har {
         display: flex;
-        height: 1300px;
-        width: 1000px;
+        height: 1500px;
+        width: 800px;
         border: solid 1px black;
         border-radius: 10px;
         padding: 30px;
@@ -1497,8 +1692,19 @@ nav {
         align-items: center;
     }
     
-    .rubriker {
-        font-size: 30px;
+    #rubrik {
+        font-size: 34pt;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .om_oss_underrubrik {
+        font-size: 21pt;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .yrke {
+        font-size: 21pt;
+        font-family: 'Playfair Display', serif;
     }
     
     #arbetare_rutor {
@@ -1507,16 +1713,16 @@ nav {
         justify-content: center;
         flex-direction: column;
         flex-wrap: wrap;
-        width: 800px;
-        height: 600px;
+        width: 500px;
+        height: 650px;
     }
     
     #om_jhf {
         display: flex;
         flex-direction: column;
         padding: 10px;
-        height: 500px;
-        width: 800px;
+        height: 600px;
+        width: 600px;
         border-radius: 10px;
         border: solid 1px black;
     }
@@ -1528,32 +1734,33 @@ nav {
     
     .arbetare {
         display: flex;
-        width: 150px;
-        height: 250px;
+        width: 170px;
+        height: 300px;
         border: 3px solid #1f2a1f;
         background-color: white;
         flex-direction: column ;
         align-items: center;
         justify-content: flex-start;
-        margin: 20px; 
+        margin: 10px; 
         border-radius: 10px;
     }
     
     #arbetare_text {
         display: flex;
-        height: 200px;
+        height: 150px;
         justify-content: center;
+        align-items: center;
         flex-direction: column;
         padding: 10px;
         align-items: center;
     }
         
-    #bild_anstalld { 
-        height: auto;
-        width: 100%;
+    .bild_anstalld { 
+        height: 222px;
+        width: 167px;
         border-bottom: 3px solid #1f2a1f;
-        border-top-left-radius: 27px;
-        border-top-right-radius: 27px;
+        border-top-left-radius: 7px;
+        border-top-right-radius: 7px;
     }
     
     header {
@@ -1566,10 +1773,6 @@ nav {
         align-items: center;
     }
       
-    header h1 {
-        margin: 0;
-    }
-      
     #links {
         display: flex;
         align-items: center;
@@ -1579,7 +1782,7 @@ nav {
         color: #fff;
         text-decoration: none;
         margin-right: 1rem;
-        font-size: 20px;
+        font-size: 16pt;
     }
       
     #links a:hover {
@@ -1590,11 +1793,18 @@ nav {
     #event_wrapper {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 800px 300px;
+        grid-template-rows: 80px 800px 600px 300px 300px;
         grid-template-areas: 
         "he he"
         "ca ev"
+        "fu fu"
+        "mf mf"
         "fo fo";
+    }
+
+    #tavlingar_rubrik {
+        font-size: 34pt;
+        font-family: 'Playfair Display', serif; 
     }
       
     #calendar {
@@ -1607,7 +1817,7 @@ nav {
         grid-area: ca;
     }
       
-    #calendar h1 {
+    #calendar h2 {
         margin: 0;
         margin-bottom: 1rem;
     }
@@ -1615,6 +1825,11 @@ nav {
     #calendar_container {
         display: grid;
         grid-gap: 0.5rem;
+    }
+
+    p {
+        font-family: 'Lato';
+        font-size: 13pt;
     }
     
     .day {
@@ -1647,7 +1862,7 @@ nav {
         padding: 2rem;
     }
       
-    #events h1 {
+    #events h2 {
         margin: 0;
         margin-bottom: 2rem;
         text-align: center;
@@ -1661,6 +1876,10 @@ nav {
         grid-gap: 2rem;
         margin: 0 auto;
     }
+
+    #events_list li:hover {
+        background-color: gray;
+    }
       
     #events_list li {
         background-color: #fff;
@@ -1672,13 +1891,13 @@ nav {
     #events_list li h2 {
         margin: 0;
         margin-bottom: 0.5rem;
-        font-size: 1.2rem;
+        font-size: 21pt;
     }
       
     #events_list li p {
         margin: 0;
         margin-bottom: 0.5rem;
-        font-size: 1rem;
+        font-size: 13pt;
     }
       
     table{
@@ -1694,7 +1913,7 @@ nav {
     
     th,td {
         font-weight: bold;
-        font-size: 18px;
+        font-size: 18pt;
     }
     
     tr{
@@ -1702,9 +1921,92 @@ nav {
     }
     
     #rubrik_kalender {
-        font-size: 25px;
+        font-size: 21pt;
         align-items: center;
-        color: orange;
+        color: black;
+    }
+
+    #funktionar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: fu;
+        background-color: #f1f1f1;
+        padding: 2rem;
+    }
+    
+    #funktionar h2 {
+        margin: 0;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    #funktionar form {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 1rem;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    #funktionar label {
+        font-weight: bold;
+    }
+    
+    #funktionar input,
+    #funktionar textarea {
+        width: 100%;
+        padding: 0.5rem;
+    }
+    
+    #funktionar button {
+        background-color: #3a3a3a;
+        color: #fff;
+        border: none;
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+    }
+    
+    #funktionar button:hover {
+        background-color: #000;
+    }
+    
+    #mer_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: mf;
+        background-color: #f1f1f1;
+        padding: 2rem;
+    }
+    
+    #mer_info h2 {
+        margin: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+    
+    #mer_info p {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+    
+    #mer_info ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    #mer_info ul li {
+        margin-bottom: 0.5rem;
+    }
+    
+    #mer_info ul li a {
+        color: #3a3a3a;
+        text-decoration: none;
+    }
+    
+    #mer_info ul li a:hover {
+        text-decoration: underline;
     }
     
     #galleri_grid {
@@ -1728,7 +2030,7 @@ nav {
       
     #galleri {
         text-align: center;
-        font-size: 36px;
+        font-size: 36pt;
     }
       
     .gallery {
@@ -1750,7 +2052,7 @@ nav {
         color: #fff;
         border: none;
         border-radius: 4px;
-        font-size: 18px;
+        font-size: 18pt;
         cursor: pointer;
     }
       
@@ -1762,7 +2064,7 @@ nav {
     #main_wrapper{
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 80px 600px 900px 300px;
+        grid-template-rows: 80px 600px 1100px 300px;
         grid-template-areas:
         "he he"
         "tf tf"
@@ -1801,10 +2103,11 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 30px;
+        font-family: 'Playfair Display', serif;
+        font-size: 55pt;
         color: white;
-        height: 100px;
-        width: 400px;
+        height: 120px;
+        width: 800px;
         background-color: indigo;
         border-radius: 20px;
     }
@@ -1813,16 +2116,24 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
+        font-family: 'Playfair Display', serif;
         flex-direction: column;
-        height: 90px;
-        width: 600px;
+        height: 80px;
+        width: 300px;
         background-color: indigo;
         border-radius: 20px;
     
     }
     
+    .avgift_rubrik {
+        color: white;
+        font-size: 21pt;
+        font-family: 'Playfair Display', serif;
+    }
+
     #lank_till_friidrottskola {
-        font-size: 20px;
+        font-size: 21pt;
+        font-family: 'Playfair Display', serif;
         text-decoration: none;
         color: white;
     }
@@ -1841,8 +2152,8 @@ nav {
         display: flex;
         height: auto;
         background-color: indigo;
-        width: 500px;
-        height: 800px;
+        width: 450px;
+        height: 900px;
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;
@@ -1856,13 +2167,13 @@ nav {
         align-items: center;
         background-color: rgb(124, 80, 158);
         justify-content: center;
-        font-size: 24px;
+        font-size: 34pt;
         border: 1px solid black;
         border-radius: 20px;
         border-radius: 20px;
         margin: 20px;
         padding: 20px;
-        width: 300px;
+        width: 350px;
     }
     
     .ruta_for_text {
@@ -1880,8 +2191,8 @@ nav {
         display: flex;
         height: auto;
         background-color: indigo;
-        width: 500px;
-        height: 800px;
+        width: 450px;
+        height: 900px;
         justify-content: space-evenly;
         flex-direction: column;
         align-items: center;

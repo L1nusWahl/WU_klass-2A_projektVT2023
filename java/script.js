@@ -7,7 +7,10 @@ function nextImage() {
   document.getElementById("slideshow").src = images[currentIndex]; 
 } 
 
+nextImage()
+
 setInterval(nextImage, 5000); 
+
 
 
 

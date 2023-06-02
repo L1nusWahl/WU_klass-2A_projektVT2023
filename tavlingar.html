@@ -4,10 +4,10 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=, initial-scale=1.0">
+        <meta name="description" content="Tävlingar och calender">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Events</title>
-        <script src="java/calendarscript.js"></script>
     </head>
 
     <body>
@@ -15,8 +15,8 @@
         <div id="event_wrapper">
             
             <header>
-                <h1>JHF</h1>
-                <div id="links">
+                <a id="webbsite_logo" href="#">JHF</a>
+                <section id="links">
                     <a href="index.html">Start</a>
                     <a href="#">Friidrottsskola</a>
                     <a href="#">Arrangemang</a>
@@ -25,12 +25,12 @@
                     <a href="#">Galleri</a>
                     <a href="trana_friidrott.html">Träna friidrott</a>
                     <a href="#">Sponsra JHF</a>
-                </div> 
+                </section> 
                
             </header>
     
             <nav>
-                <ul id="nav-links" class="nav_active">
+                <ul id="nav-links">
                     <li><a href="index.html">Start</a></li>
                     <li><a href="#">Friidrottsskola</a></li>
                     <li><a href="#">Arrangemang</a></li>
@@ -41,19 +41,42 @@
                     <li><a href="#">Sponsra</a></li>
                 </ul>
     
-                <div id="burger" class="burger_toggle">
+                <div id="burger">
                     <div id="burger_line_1"></div>
                     <div id="burger_line_2"></div>
                     <div id="burger_line_3"></div>
                 </div>
             </nav>
 
+            <section id="events">
+                <h1 id="tavlingar_rubrik">Våra tävlingar</h1>
+                <ul id="events_list">
+                    <li>
+                        <h2>Startskottet</h2>
+                        <p>Datum: 2023-04-01</p>
+                        <p>Plats: Friidrottenshus</p>
+                        <p>Info: Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim at praesentium assumenda facere distinctio reiciendis quae dolores saepe doloribus in atque corrupti cupiditate perspiciatis temporibus perferendis nam fuga, voluptatum molestias.</p>
+                    </li>
+                    <li>
+                        <h2>Göteborg inomhus</h2>
+                        <p>Datum: 2023-04-15</p>
+                        <p>Plats: Friidrottenshus</p>
+                        <p>Info: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius vel accusantium et natus. Ullam, cum.</p>
+                    </li>
+                    <li>
+                        <h2>Sävedalsspelen</h2>
+                        <p>Datum: 2023-05-01</p>
+                        <p>Plats: Slottskogsvallen</p>
+                        <p>Info: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, facilis nulla necessitatibus alias ab quia velit voluptate quae facere similique!</p>
+                    </li>
+                </ul>
+            </section>
 
             <section id="calendar">
                 <h2 id="rubrik_kalender">
-                    January 2021
+                    April 2023
                 </h2>
-                <br/>
+                
               
                 <table>
 
@@ -91,7 +114,6 @@
                             <td>1</td>
                             <td>2</td>
                         </tr>
-                        <tr></tr>
                         <tr>
                             <td>3</td>
                             <td>4</td>
@@ -141,27 +163,35 @@
                 </table>
             </section>
 
-            <section id="events">
-                <h1>Våra egna tävlingar</h1>
-                <ul id="events_list">
-                    <li>
-                        <h2>Startskottet</h2>
-                        <p>Datum: 2023-04-01</p>
-                        <p>Plats: Friidrottenshus</p>
-                        <p>Info: Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim at praesentium assumenda facere distinctio reiciendis quae dolores saepe doloribus in atque corrupti cupiditate perspiciatis temporibus perferendis nam fuga, voluptatum molestias.</p>
-                    </li>
-                    <li>
-                        <h2>Göteborg inomhus</h2>
-                        <p>Datum: 2023-04-15</p>
-                        <p>Plats: Friidrottenshus</p>
-                        <p>Info: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eius vel accusantium et natus. Ullam, cum.</p>
-                    </li>
-                    <li>
-                        <h2>Sävedalsspelen</h2>
-                        <p>Datum: 2023-05-01</p>
-                        <p>Plats: Slottskogsvallen</p>
-                        <p>Info: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt, facilis nulla necessitatibus alias ab quia velit voluptate quae facere similique!</p>
-                    </li>
+            <section id="funktionar">
+                <h2>Anmälan som funktionär</h2>
+                <p>Vi behöver ditt stöd! Om du är intresserad av att vara funktionär på våra tävlingar, fyll i formuläret nedan:</p>
+                
+                <form>
+                    <label for="name">Namn:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">E-post:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Telefonnummer:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    
+                    <label for="message">Meddelande:</label>
+                    <textarea id="message" name="message"></textarea>
+                    
+                    <button type="submit">Skicka</button>
+                </form>
+            </section>
+            
+            <section id="mer_info">
+                <h2>Övrig information</h2>
+                <p>Här kan du hitta mer information om vår förening och våra evenemang:</p>
+                <ul>
+                    <li><a href="#">Om oss</a></li>
+                    <li><a href="#">Våra tävlingar</a></li>
+                    <li><a href="#">Kontakta oss</a></li>
+                    <li><a href="#">Bli medlem</a></li>
                 </ul>
             </section>
     
@@ -169,53 +199,50 @@
             <footer>
                 <section id="adress_section">
                     <h2 class="footer_rubrik">ADRESS</h2>
-                    <div>
+                    <section>
                         <p class="text_footer"> Friidrottens Väg 7</p>
                         <p class="text_footer">414 76 Göteborg</p>
                         <p class="text_footer"></p>
-                    </div>
+                    </section>
                     
                 </section>
                 <section id="kontakt_section">
                     <h2 class="footer_rubrik">KONTAKT</h2>
-                    <div>
+                    <section>
                         <p class="text_footer">Telefon: 073-075 61 34</p>
                         <p class="text_footer">E-post: friidrott@jhf.se</p>
-                    </div>
+                    </section>
                     
         
                 </section>
                 <section id="mf_section">
-                    <h2 class="footer_rubrik">MEDLEMSFÖRENINGAR</h2>
-                    <div>
+                    <h2 class="footer_rubrik">FÖRENINGAR</h2>
+                    <section>
                         <p class="text_footer">JHF Friidrott</p>
                         <p class="text_footer">JHF Brottning</p>
                         <p class="text_footer">JHF Fotboll</p>
                         <p class="text_footer">JHF Handboll</p>
-                    </div>
+                    </section>
                     
                 </section>
                 <section id="sociala_m_section">
                     <h2 class="footer_rubrik">SOCIALA MEDIER</h2>
                     <section id="logo">
-                        <div>  
+                        <section>  
                             <a href="#" class="fa fa-facebook"></a>
                             <a href="#" class="fa fa-twitter"></a>
                             <a href="#" class="fa fa-instagram"></a>
                             <a href="#" class="fa fa-snapchat-ghost"></a>
-                        </div>
+                        </section>
                       
                     </section>
                 </section>
             </footer>
     
         </div>
-
-        
+        <script src="java/hamburger.js"></script>
+ 
     </body>
-
-    <script src="java/script.js"></script>
-    <script src="java/hamburger.js"></script>
 
 
 </html>
