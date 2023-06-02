@@ -709,7 +709,7 @@ p{
     display: grid;
     height: 300vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 900px 500px 600px 300px 700px;
+    grid-template-rows: 80px 900px 500px 700px 300px 700px;
     grid-template-areas: 
     "he na"
     "ev ev"
